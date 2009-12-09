@@ -1,0 +1,33 @@
+# Contributor: Johannes Dewender < arch at JonnyJD dot net >
+
+pkgname=vim-vimwiki
+pkgver=0.9.6
+pkgrel=1
+pkgdesc="Personal Wiki for Vim"
+arch=('any')
+url="http://code.google.com/p/vimwiki/"
+license=('MIT')
+groups=('vim-plugins')
+depends=(vim)
+install=vimdoc.install
+source=(http://vimwiki.googlecode.com/files/vimwiki_0_9_6.zip
+        license.txt)
+md5sums=('6fd0fd4d326a49adefda6652140ccf27'
+         'e19fa0689d06a724fc8ddfe824ef2680')
+
+build() {
+  install -d ${pkgdir}/usr/share/vim/vimfiles/{autoload,doc,ftplugin} \
+    || return 1
+  install -d ${pkgdir}/usr/share/vim/vimfiles/{plugin,syntax}/ \
+    || return 1
+  for x in {autoload,doc,ftplugin,plugin,syntax}; do
+    install -Dm644 ${srcdir}/$x/* \
+      ${pkgdir}/usr/share/vim/vimfiles/$x/ \
+      || return 1;
+  done
+  install -Dm644 ${srcdir}/license.txt \
+    ${pkgdir}/usr/share/licenses/${pkgname}/license.txt \
+    || return 1
+}
+
+# vim:set ts=2 sw=2 et:
