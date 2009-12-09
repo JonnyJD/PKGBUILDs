@@ -1,0 +1,27 @@
+# Contributor: Judd Vinet <jvinet@zeroflux.org>
+
+pkgname=rsynct
+_pkgname=rsync
+pkgver=3.0.6
+pkgrel=1
+pkgdesc="A file transfer program to keep remote files in sync - with patch"
+arch=('i686' 'x86_64')
+url="http://samba.anu.edu.au/rsync/"
+license=('GPL3')
+depends=('acl')
+source=(http://rsync.samba.org/ftp/rsync/${_pkgname}-${pkgver}.tar.gz \
+	http://rsync.samba.org/ftp/rsync/${_pkgname}-patches-${pkgver}.tar.gz)
+md5sums=('e9865d093a18e4668b9d31b635dc8e99'
+         'e3735e51dfa47ac36ca8a872a5a4705f')
+
+build() {
+  cd ${srcdir}/${_pkgname}-${pkgver}
+  patch -p1 < patches/transliterate.diff
+  ./prepare-source || return 1
+  ./configure --prefix=/usr --with-included-popt \
+              --enable-acl-support --enable-xattr-support || return 1
+  make || return 1
+  make DESTDIR=${pkgdir} install || return 1
+  mv ${pkgdir}/usr/bin/rsync ${pkgdir}/usr/bin/rsynct
+  rm -r ${pkgdir}/usr/share
+}
