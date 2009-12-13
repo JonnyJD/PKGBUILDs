@@ -1,7 +1,7 @@
 # Contributor: Johannes Dewender < arch at JonnyJD dot net >
 
 pkgname=vim-vimwiki
-pkgver=0.9.7
+pkgver=0.9.701
 pkgrel=1
 pkgdesc="Personal Wiki for Vim"
 arch=('any')
@@ -10,9 +10,9 @@ license=('MIT')
 groups=('vim-plugins')
 depends=(vim)
 install=vimdoc.install
-source=(http://vimwiki.googlecode.com/files/vimwiki_0_9_7.zip
+source=(http://vimwiki.googlecode.com/files/vimwiki_0_9_701.zip
         license.txt)
-md5sums=('ef3cf41bba548cc09ee11763b6350a3a'
+md5sums=('ccf86fb3beeccc0ed754d09b794082f9'
          'e19fa0689d06a724fc8ddfe824ef2680')
 
 build() {
