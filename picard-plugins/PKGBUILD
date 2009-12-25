@@ -1,9 +1,9 @@
 # Contributor: Johannes Dewender  arch at JonnyJD dot net
 pkgname=picard-plugins
 pkgver=0.12
-pkgrel=2
+pkgrel=3
 pkgdesc="Plugins for MusicBrainz Picard"
-arch=('i686' 'x86_64')
+arch=('any')
 url="http://musicbrainz.org/doc/PicardPlugins"
 license=('GPL')
 depends=('picard>=0.12.0')
