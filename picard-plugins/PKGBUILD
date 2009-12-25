@@ -1,7 +1,7 @@
 # Contributor: Johannes Dewender  arch at JonnyJD dot net
 pkgname=picard-plugins
 pkgver=0.12
-pkgrel=1
+pkgrel=2
 pkgdesc="Plugins for MusicBrainz Picard"
 arch=('i686' 'x86_64')
 url="http://musicbrainz.org/doc/PicardPlugins"
@@ -10,7 +10,7 @@ depends=('picard>=0.12.0')
 source=(http://users.musicbrainz.org/~luks/picard-qt/plugins/discnumber.py
 http://users.musicbrainz.org/~luks/picard-qt/plugins/featartist.py
 http://oxygene.sk/lukas/titlecase.py
-http://users.musicbrainz.org/~luks/picard-qt/plugins/coverart.py
+http://users.musicbrainz.org/~outsidecontext/picard/plugins/coverart.py
 http://users.musicbrainz.org/~luks/picard-qt/plugins/lastfm/__init__.py
 http://users.musicbrainz.org/~luks/picard-qt/plugins/lastfm/ui_options_lastfm.py
 http://users.musicbrainz.org/~luks/picard-qt/plugins/addrelease.py
@@ -21,7 +21,7 @@ http://foolip.org/mb/encoding.py)
 md5sums=('4dcbf286e1facae1c03f116fe2d078d6'
          '7885928a813344a80679794c21dfd193'
          'd658d27422da5d41d6fd32fbd47b51ed'
-         'a9643e50a28a8b4a12759117c53b029d'
+         '9577c982428db7eb5de864f29ee44452'
          'b5cfbdb00a21928078d9590a91083773'
          '691cb36b7724362a9986c7a8fbb559f2'
          '64cf9fcb6212dde57aed679a02e88b31'
