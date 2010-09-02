@@ -1,7 +1,7 @@
 # Contributor: Johannes Dewender < arch at JonnyJD dot net >
 
 pkgname=vim-vimwiki
-pkgver=1.0
+pkgver=1.1
 pkgrel=1
 pkgdesc="Personal Wiki for Vim"
 arch=('any')
@@ -10,9 +10,9 @@ license=('MIT')
 groups=('vim-plugins')
 depends=(vim)
 install=vimdoc.install
-source=(http://vimwiki.googlecode.com/files/vimwiki-1-0.zip
+source=(http://vimwiki.googlecode.com/files/vimwiki-1-1.zip
         license.txt)
-md5sums=('bd87eb39cb9fd1d7942f9de1e193ceb9'
+md5sums=('74ff31bab0ca86e1427d2c0792f29c07'
          'e19fa0689d06a724fc8ddfe824ef2680')
 
 build() {
