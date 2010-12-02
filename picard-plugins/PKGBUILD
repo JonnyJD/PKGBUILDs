@@ -1,7 +1,7 @@
 # Contributor: Johannes Dewender  arch at JonnyJD dot net
 pkgname=picard-plugins
 pkgver=0.12.1
-pkgrel=1
+pkgrel=3
 pkgdesc="Plugins for MusicBrainz Picard"
 arch=('any')
 url="http://musicbrainz.org/doc/PicardPlugins"
@@ -31,7 +31,7 @@ md5sums=('4dcbf286e1facae1c03f116fe2d078d6'
          '7566f2b8b3ce74adccb1fecf616a207b')
 
 build() {
-  plugindir=${pkgdir}/usr/lib/python2.6/site-packages/picard/plugins
+  plugindir=${pkgdir}/usr/lib/python2.7/site-packages/picard/plugins
   cd "$srcdir"
   mkdir -p $plugindir
   cp discnumber.py featartist.py titlecase.py coverart.py addrelease.py cuesheet.py bonusdisc.py encoding.py originalreleasedate.py $plugindir

@@ -1,7 +1,7 @@
 # Contributor: Johannes Dewender  arch at JonnyJD dot net
 pkgname=picard-plugins-search
 pkgver=0.12
-pkgrel=1
+pkgrel=2
 pkgdesc="search plugins for MusicBrainz Picard"
 arch=('any')
 url="http://musicbrainz.org/doc/PicardPlugins"
@@ -29,7 +29,7 @@ md5sums=('813073af46b3b6811e6956360b2f0ffb'
          '059e2c81ba03ed605af5d3e4d02a0b23')
 
 build() {
-  plugindir=${pkgdir}/usr/lib/python2.6/site-packages/picard/plugins
+  plugindir=${pkgdir}/usr/lib/python2.7/site-packages/picard/plugins
   cd "$srcdir"
   mkdir -p $plugindir
   cp  SearchAMG.py SearchAmazon3.py SearchCastAlbums3.py SearchDiscogs3.py SearchFilmMusziek3.py SearchGMR.py SearchGoogle3.py SearchLortelArchives3.py SearchSoundtrackCollector3.py SearchSoundtrackINFO3.py $plugindir
