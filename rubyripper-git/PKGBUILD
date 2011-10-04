@@ -2,7 +2,7 @@
 # Many thanks to Rasi for starting this
 
 pkgname=rubyripper-git
-pkgver=20100212
+pkgver=20100605
 pkgrel=1
 
 conflicts=('rubyripper')
@@ -47,46 +47,21 @@ if [ -d $startdir/src/$_gitname ] ; then
 else
 	git clone $_gitroot
 	cd $_gitname
-	echo "reseting.."
-	#git reset --hard c678c6d69d4d 
-	#git reset --hard cb2e249bf 
-	#git reset --hard 22d806408cb 
-	#git reset --hard a5848a38cdd52 
-	#git reset --hard a709f048e 
-	#git reset --hard 2439e46ce32 
-	#git reset --hard 0d36541e30 
-	#git reset --hard 88f91a3482ac 
-	#git reset --hard 9eb44c04f95 # russian (fails)
-	#git reset --hard 047d345781 # german (works)
-	# ----- my fork
-	#git reset --hard 9eb44c04f95 # russian (fails)
-	#git reset --hard 047d345781 # german (works)
-	#git reset --hard da0917249 # branch (works)
-
-	echo "reverting.."
+	#echo "reverting.."
 	#git revert --no-edit cb2e249bf # timeout
 	#git revert --no-edit a5848a38cdd # --all option
 	#git revert --no-edit 9eb44c04f95 # russian
-
-	#echo "patching.."
-	#patch -p1 < ../../ru_utf_error.patch
-	#head -n 521 locale/po/ru/rubyripper.po > tmp.$$
-	#mv tmp.$$ locale/po/ru/rubyripper.po
 fi
 
 cd "$srcdir/rubyripper"
-#rm -r locale/po/{bg,fr}
-#rm -r locale/po/{ru,bg}
 #rm -r locale/po/bg
 #./configure --udpate-lang
 ./configure --prefix=/usr --enable-gtk2 --enable-cli --enable-lang-all
-#./configure --prefix=/usr --enable-gtk2 --enable-cli
-#./configure --enable-gtk2 --enable-cli --enable-lang-all
 #./configure --enable-gtk2 --enable-cli
 #cat configure | sed -e '/update_pofiles/d' > configure.$$
 #mv configure.$$ configure
 make DESTDIR="$pkgdir" install
 #LC_ALL=en_US.UTF-8 make DESTDIR="$pkgdir" install
 
-exit 1
+#exit 1
 }
