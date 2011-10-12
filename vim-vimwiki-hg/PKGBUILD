@@ -19,7 +19,7 @@ md5sums=('e19fa0689d06a724fc8ddfe824ef2680')
 _hgroot="https://code.google.com/p"
 _hgrepo="vimwiki"
 #_rev=2f2b0dd28ce4
-_rev=d2a963714498
+#_rev=d2a963714498
 
 build() {
   cd "$srcdir"
@@ -35,15 +35,15 @@ build() {
 
   msg "Mercurial checkout done or server timeout"
 
-  msg "Update to revision $_rev"
-  hg update -r $_rev
+  #msg "Update to revision $_rev"
+  #hg update -r $_rev
 
-  msg "Summary"
-  hg summary
+  #msg "Summary"
+  #hg summary
 }
 
 package() {
-  pkgver=$_rev
+  #pkgver=$_rev
   install -d ${pkgdir}/usr/share/vim/vimfiles/autoload/vimwiki \
     || return 1
   install -d ${pkgdir}/usr/share/vim/vimfiles/{doc,ftplugin} \
