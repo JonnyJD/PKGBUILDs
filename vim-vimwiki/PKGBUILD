@@ -2,7 +2,7 @@
 
 pkgname=vim-vimwiki
 pkgver=1.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Personal Wiki for Vim"
 arch=('any')
 url="http://code.google.com/p/vimwiki/"
@@ -15,7 +15,7 @@ source=(http://vimwiki.googlecode.com/files/vimwiki-1-2.zip
 md5sums=('fc99c8f589db191dc4bfe9aff4243788'
          'e19fa0689d06a724fc8ddfe824ef2680')
 
-build() {
+package () {
   install -d ${pkgdir}/usr/share/vim/vimfiles/autoload/vimwiki \
     || return 1
   install -d ${pkgdir}/usr/share/vim/vimfiles/{doc,ftplugin} \
