@@ -1,0 +1,22 @@
+post_install() {
+  cd /opt/addon-sdk
+  . bin/activate
+  DISPLAY= cfx docs
+  deactivate
+}
+
+post_upgrade() {
+  cd /opt/addon-sdk
+  . bin/activate
+  DISPLAY= cfx docs
+  deactivate
+}
+
+pre_remove() {
+  cd /opt/addon-sdk
+  . bin/activate
+  DISPLAY= cfx docs
+  deactivate
+}
+
+# vim:set ts=2 sw=2 ft=sh et:
