@@ -1,33 +1,23 @@
-# PGO might not build for you. And it takes very long time to compile.
-_enable_pgo="n"
-# JEMALLOC not works for me, at least. You can just try, but might waste time.
-_enable_jemalloc_pgo="n"
+# Contributor: Johannes Dewender	arch at JonnyJD dot net
+# Contributor: Ionut Biru <ibiru@archlinux.org>
+# Contributor: Jakub Schmidtke <sjakub@gmail.com>
 
-
-
-pkgname=firefox-esr
+pkgname=firefox-esr-alt
 pkgver=10.0.2
 _pkgveresr=${pkgver}esr
 pkgrel=1
-pkgdesc="Standalone web browser from mozilla.org - ESR release"
+pkgdesc="Mozilla Firefox ESR (Extenden Support Release) as additional install"
+url="http://www.mozilla.org/projects/firefox"
 arch=('i686' 'x86_64')
 license=('MPL' 'GPL' 'LGPL')
-depends=('gtk2' 'gcc-libs' 'libidl2' 'mozilla-common' 'nss>=3.13.1' 'libxt'
-         'libxrender' 'hunspell' 'startup-notification' 'mime-types' 'dbus-glib'
-         'alsa-lib' 'libevent' 'sqlite3>=3.7.4' 'libnotify' 'desktop-file-utils'
-         'libvpx' 'lcms' 'nspr>=4.8.8' 'libevent' 'libpng' 'cairo'  )
-makedepends=('zip' 'pkg-config' 'diffutils' 'python2' 'wireless_tools' 'yasm'
-             'mesa' 'unzip' 'autoconf2.13')
-conflicts=('firefox')
-replaces=('firefox')
-
-if [[ $_enable_pgo == "y" ]]; then
-    if [ ! -f '/etc/chakra-release' ]; then
-        makedepends+=('xorg-server-xvfb')
-    fi
-fi
-
-url="http://www.mozilla.org/projects/firefox"
+depends=('gtk2' 'mozilla-common' 'nss>=3.13.1' 'libxt' 'hunspell'
+	'startup-notification' 'mime-types' 'dbus-glib' 'alsa-lib' 'sqlite3'
+	'libnotify' 'desktop-file-utils' 'libvpx' 'libevent'
+	'hicolor-icon-theme')
+makedepends=('unzip' 'zip' 'pkg-config' 'diffutils' 'python2' 'wireless_tools'
+	'yasm' 'mesa' 'autoconf2.13' 'libidl2' 'xorg-server-xvfb')
+conflicts=()
+replaces=()
 install=firefox.install
 source=(ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/$_pkgveresr/source/firefox-$_pkgveresr.source.tar.bz2
         mozconfig 
@@ -36,7 +26,6 @@ source=(ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/$_pkgveresr/sourc
         vendor.js
         libvpx.patch
         mozconfig-pgo)
-
 md5sums=('5e59698d02bf62721eeb1019b77962e4'
          '16378e812e79ee4791c7d64c8055149d'
          'bdeb0380c7fae30dd0ead6d2d3bc5873'
@@ -53,14 +42,6 @@ build() {
   patch -Np1 -i "$srcdir/firefox-install-dir.patch"
   patch -Np1 -i "$srcdir/libvpx.patch"
 
-  if [[ $_enable_pgo == "y" ]]; then
-      msg "PGO is enabled"
-      cp "${srcdir}/mozconfig-pgo" .mozconfig
-  else
-      msg "PGO is disabled"
-      cp "${srcdir}/mozconfig" .mozconfig
-  fi
-
   # Fix PRE_RELEASE_SUFFIX
   sed -i '/^PRE_RELEASE_SUFFIX := ""/s/ ""//' \
       browser/base/Makefile.in
@@ -68,28 +49,9 @@ build() {
   export LDFLAGS="$LDFLAGS -Wl,-rpath,/usr/lib/firefox"
   export PYTHON="/usr/bin/python2"
   
-  # PGO
-  if [[ $_enable_pgo == "y" ]]; then
-      if [[ $_enable_jemalloc_pgo == "y" ]]; then
-        sed -i '/^NO_PROFILE_GUIDED_OPTIMIZE = 1$/d' \
-            memory/jemalloc/Makefile.in
-      fi
-      echo 'LDFLAGS += -lX11 -lXrender' \
-          >> layout/build/Makefile.in
-
-      if [ "${CARCH}" = "x86_64" ]; then
-        make -j1 -f client.mk build MOZ_MAKE_FLAGS="${MAKEFLAGS}"
-      fi
-
-      LD_PRELOAD="" /usr/bin/Xvfb -nolisten tcp -extension GLX -screen 0 1280x1024x24 :99 &
-      LD_PRELOAD="" DISPLAY=:99 make -j1 -f client.mk profiledbuild MOZ_MAKE_FLAGS="$MAKEFLAGS"
-      kill $! || true
-  else
-      make -j1 -f client.mk build MOZ_MAKE_FLAGS="${MAKEFLAGS}"
-  fi
-
-
-
+  LD_PRELOAD="" /usr/bin/Xvfb -nolisten tcp -extension GLX -screen 0 1280x1024x24 :99 &
+  LD_PRELOAD="" DISPLAY=:99 make -j1 -f client.mk profiledbuild MOZ_MAKE_FLAGS="$MAKEFLAGS"
+  kill $! || true
 }
 
 package() {
@@ -118,3 +80,5 @@ package() {
   #https://bugzilla.mozilla.org/show_bug.cgi?id=658850
   ln -sf firefox "$pkgdir/usr/lib/firefox/firefox-bin"
 }
+
+# vim:set ts=2 sw=2 et:
