@@ -3,7 +3,7 @@
 # Contributor: Jakub Schmidtke <sjakub@gmail.com>
 
 pkgname=firefox-esr-alt
-pkgver=10.0.2
+pkgver=10.0.6
 _pkgveresr=${pkgver}esr
 pkgrel=1
 pkgdesc="Mozilla Firefox ESR (Extenden Support Release) as additional install"
@@ -13,27 +13,21 @@ license=('MPL' 'GPL' 'LGPL')
 depends=('gtk2' 'mozilla-common' 'nss>=3.13.1' 'libxt' 'hunspell'
 	'startup-notification' 'mime-types' 'dbus-glib' 'alsa-lib' 'sqlite3'
 	'libnotify' 'desktop-file-utils' 'libvpx' 'libevent'
-	'hicolor-icon-theme')
+	'hicolor-icon-theme' 'libffi5')
 makedepends=('unzip' 'zip' 'pkg-config' 'diffutils' 'python2' 'wireless_tools'
 	'yasm' 'mesa' 'autoconf2.13' 'libidl2' 'xorg-server-xvfb')
 conflicts=()
 replaces=()
 install=firefox.install
 source=(ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/$_pkgveresr/source/firefox-$_pkgveresr.source.tar.bz2
-        mozconfig 
-        firefox.desktop 
-        firefox-install-dir.patch 
-        vendor.js
-        libvpx.patch
-        mozconfig-pgo)
-md5sums=('5e59698d02bf62721eeb1019b77962e4'
-         '16378e812e79ee4791c7d64c8055149d'
-         'bdeb0380c7fae30dd0ead6d2d3bc5873'
-         '594523c536a9be951b52c90dd85aff18'
+        mozconfig vendor.js
+        firefox-install-dir.patch libvpx.patch unistd.patch)
+md5sums=('45e3209628d56706f83b4c1bdc3c869c'
+         '2c40f7df6b6c680d33c59311e1354aa1'
          '0d053487907de4376d67d8f499c5502b'
+         '594523c536a9be951b52c90dd85aff18'
          '5d418ecdbdb9f40597df6b978b0b5ee5'
-         'e8c3850c1d93ffabd7f007f86e6365a8')
-
+         '51f1c3b0c072fb2ec12de28be61a7787')
 
 build() {
   cd "$srcdir/mozilla-esr10"
@@ -41,16 +35,18 @@ build() {
   cp "$srcdir/mozconfig" .mozconfig
   patch -Np1 -i "$srcdir/firefox-install-dir.patch"
   patch -Np1 -i "$srcdir/libvpx.patch"
+  patch -Np1 -i "$srcdir/unistd.patch"
+  #patch -Np1 -i "$srcdir/ignore-shlibsign-error.patch"
 
   # Fix PRE_RELEASE_SUFFIX
   sed -i '/^PRE_RELEASE_SUFFIX := ""/s/ ""//' \
       browser/base/Makefile.in
   
-  export LDFLAGS="$LDFLAGS -Wl,-rpath,/usr/lib/firefox"
+  export LDFLAGS="$LDFLAGS -Wl,-rpath,/usr/lib/firefox-esr"
   export PYTHON="/usr/bin/python2"
   
   LD_PRELOAD="" /usr/bin/Xvfb -nolisten tcp -extension GLX -screen 0 1280x1024x24 :99 &
-  LD_PRELOAD="" DISPLAY=:99 make -j1 -f client.mk profiledbuild MOZ_MAKE_FLAGS="$MAKEFLAGS"
+  LD_PRELOAD="" DISPLAY=:99 make -j3 -f client.mk profiledbuild MOZ_MAKE_FLAGS="$MAKEFLAGS"
   kill $! || true
 }
 
@@ -58,27 +54,23 @@ package() {
   cd "$srcdir/mozilla-esr10"
   make -j1 -f client.mk DESTDIR="$pkgdir" install
 
-  install -m644 "$srcdir"/vendor.js "$pkgdir/usr/lib/firefox/defaults/pref"
+  mv "$pkgdir/usr/lib/firefox" "$pkgdir/usr/lib/firefox-esr"
+  rm -f "$pkgdir/usr/bin/firefox"
+  ln -sf "/usr/lib/firefox-esr/firefox" "$pkgdir/usr/bin/firefox-esr"
 
-  for i in 16x16 22x22 24x24 32x32 48x48 256x256; do
-      install -Dm644 browser/branding/official/default${i/x*/}.png \
-        "$pkgdir/usr/share/icons/hicolor/$i/apps/firefox.png"
-  done
+  install -m644 "$srcdir"/vendor.js "$pkgdir/usr/lib/firefox-esr/defaults/pref"
 
-  install -Dm644 "$srcdir/firefox.desktop" \
-    "$pkgdir/usr/share/applications/firefox.desktop"
-
-  rm -rf "$pkgdir"/usr/lib/firefox/{dictionaries,hyphenation}
-  ln -sf /usr/share/hunspell "$pkgdir/usr/lib/firefox/dictionaries"
-  ln -sf /usr/share/hyphen "$pkgdir/usr/lib/firefox/hyphenation"
+  rm -rf "$pkgdir"/usr/lib/firefox-esr/{dictionaries,hyphenation}
+  ln -sf /usr/share/hunspell "$pkgdir/usr/lib/firefox-esr/dictionaries"
+  ln -sf /usr/share/hyphen "$pkgdir/usr/lib/firefox-esr/hyphenation"
 
 
   # We don't want the development stuff
-  rm -r "$pkgdir"/usr/{include,lib/firefox-devel,share/idl}
+  rm -r "$pkgdir"/usr/{include,lib/firefox-devel,share}
 
   #workaround for now
   #https://bugzilla.mozilla.org/show_bug.cgi?id=658850
-  ln -sf firefox "$pkgdir/usr/lib/firefox/firefox-bin"
+  ln -sf firefox "$pkgdir/usr/lib/firefox-esr/firefox-bin"
 }
 
 # vim:set ts=2 sw=2 et:
