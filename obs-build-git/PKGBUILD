@@ -1,23 +1,24 @@
 # Contributor: Eduardo Robles Elvira <edulix AT gmail DOT com>
-# Maintainer: Jon Nordby <jononor@gmail.com>
+# Contributor: Jon Nordby <jononor@gmail.com>
+# Contributor: Johannes Dewender arch at JonnyJD dot net
 
-pkgname=osc-build-git
-_pkgname=osc-build
+pkgname=obs-build-git
+_pkgname=obs-build
 provides=($_pkgname)
 conflicts=($_pkgname)
-pkgver=20111013
+pkgver=20130119
 pkgrel=1
-pkgdesc="The build software used for Open Build Service - git"
+pkgdesc="The build software used for Open Build Service - git version"
 url="http://build.opensuse.org"
 license=("GPL")
-depends=(bash perl perl-timedate binutils tar subversion)
-builddepends=(bash)
-makedepends=(subversion)
-arch=(i686 x86_64)
+depends=(bash perl perl-timedate)
+makedepends=(git)
+arch=(any)
 source=()
 md5sums=()
-_gitroot="git://gitorious.org/opensuse/build.git"
-_gitname="build"
+
+_gitroot="https://github.com/openSUSE/obs-build.git"
+_gitname="$_pkgname"
 
 build() {
   cd "$srcdir"
@@ -32,7 +33,9 @@ build() {
 
   msg "GIT checkout done or server timeout"
   msg "Install..."
+}
 
+package() {
   cd "$srcdir/$_gitname"
   make install DESTDIR="$pkgdir"
 }
