@@ -12,7 +12,7 @@ depends=('python2' 'apt')
 makedepends=()
 conflicts=()
 options=(!emptydirs)
-source=(http://ftp.de.debian.org/debian/pool/main/p/python-apt/python-apt_0.8.8.1.tar.gz)
+source=(http://ftp.debian.org/debian/pool/main/p/python-apt/python-apt_0.8.8.1.tar.gz)
 md5sums=('d4c54189b2d1082dc68276864178dc9d')
 
 build() {

@@ -8,7 +8,7 @@ arch=('any')
 url="http://packages.debian.org/sid/dh-make"
 license=('GPL')
 depends=('debhelper' 'dpkg' 'perl' 'make')
-source=(http://ftp.de.debian.org/debian/pool/main/d/dh-make/dh-make_$pkgver.tar.gz)
+source=(http://ftp.debian.org/debian/pool/main/d/dh-make/dh-make_$pkgver.tar.gz)
 md5sums=('405aa44ae1422e7440ffc43c1646aece')
 
 package() {
