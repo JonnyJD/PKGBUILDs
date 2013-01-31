@@ -16,6 +16,7 @@ replaces=()
 backup=()
 source=("https://ftp.mozilla.org/pub/mozilla.org/labs/jetpack/addon-sdk-${pkgver}.tar.gz")
 install='addon-sdk.install'
+md5sums=('260d364b5f0a0a55153525fcfe9e279e')
 
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
