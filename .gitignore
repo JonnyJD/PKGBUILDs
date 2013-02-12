@@ -1,2 +1,4 @@
 *.tar.gz
 *.tar.xz
+*.rpm
+*.zip
