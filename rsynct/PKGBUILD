@@ -2,17 +2,17 @@
 
 pkgname=rsynct
 _pkgname=rsync
-pkgver=3.0.6
+pkgver=3.0.9
 pkgrel=1
-pkgdesc="A file transfer program to keep remote files in sync - with patch"
+pkgdesc="rsync with transliterate patch"
 arch=('i686' 'x86_64')
 url="http://samba.anu.edu.au/rsync/"
 license=('GPL3')
 depends=('acl')
 source=(http://rsync.samba.org/ftp/rsync/${_pkgname}-${pkgver}.tar.gz \
 	http://rsync.samba.org/ftp/rsync/${_pkgname}-patches-${pkgver}.tar.gz)
-md5sums=('e9865d093a18e4668b9d31b635dc8e99'
-         'e3735e51dfa47ac36ca8a872a5a4705f')
+md5sums=('5ee72266fe2c1822333c407e1761b92b'
+         '992677c7f1ac2884d9469b3a0eff594a')
 
 build() {
   cd ${srcdir}/${_pkgname}-${pkgver}
