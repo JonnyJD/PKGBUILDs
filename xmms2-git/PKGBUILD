@@ -31,7 +31,7 @@ optdepends=('alsa-lib: ALSA audio output'
 	'jack: JACK audio output'
 	'libao: liboa audio output'
 	'libdiscid: cdda support'
-	'libcdio: cdda support'
+	'libcdio-paranoia: cdda support'
 	'libofa: MusicDNS fingerprinting'
 	'libgme: support various game music formats'
 	'libmms: play MMS streams'
@@ -82,6 +82,9 @@ build() {
 
   cp -a $_gitname $_gitname-build
   cd $_gitname-build
+
+  sed -i 's|#include <cdio/cdda.h>|#include <cdio/paranoia/cdda.h>|' \
+          src/plugins/cdda/cdda.c
 
   ./waf configure --prefix=/usr \
 	--with-optionals=python,launcher,xmmsclient++,xmmsclient++-glib,perl,ruby,nycli,mdns,pixmaps,medialib-updater
