@@ -53,9 +53,10 @@ optdepends=('alsa-lib: ALSA audio output'
 conflicts=('xmms2' 'xmms2-devel')
 provides=('xmms2')
 install=xmms2.install
-source=(xmms2d.conf xmms2d.rc)
+source=(xmms2d.conf xmms2d.rc xmms2d.service)
 md5sums=('af13c937bf3c86b77ae6820107aab9b8'
-         '893371ba4dc7b428322e44329683211f')
+         '893371ba4dc7b428322e44329683211f'
+         '47e68461589578e8a99857746c5b6f29')
 
 _gitroot="git://git.xmms.se/xmms2/xmms2-devel"
 _gitname="xmms2-devel"
@@ -97,6 +98,7 @@ package() {
 
   install -D -m 0755 ../xmms2d.rc ${pkgdir}/etc/rc.d/xmms2d
   install -D -m 0644 ../xmms2d.conf ${pkgdir}/etc/conf.d/xmms2d.conf
+  install -D -m 0644 ../xmms2d.service ${pkgdir}/usr/lib/systemd/system/xmms2d.service
 }
 
 # vim:set ts=2 sw=2 et:
