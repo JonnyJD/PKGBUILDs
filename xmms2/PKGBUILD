@@ -54,12 +54,16 @@ source=("http://downloads.sourceforge.net/${pkgname}/${pkgname}-${pkgver}.tar.bz
 	"xmms2d.conf"
 	"xmms2d.rc"
 	"xmms2d.service"
-	"ffmpeg-0.11.diff")
+	"ffmpeg-0.11.diff"
+	"cdda.patch"
+	"discid.patch")
 md5sums=('84d5c05a70bfd31ed392a4e3f701eaa3'
          'af13c937bf3c86b77ae6820107aab9b8'
          '31ab8c0980966dbe3e9f5e80b7b82612'
          '47e68461589578e8a99857746c5b6f29'
-         'e176971ef96807f72fa8fc17d260c20a')
+         'e176971ef96807f72fa8fc17d260c20a'
+         '648267acbea0c4f4b42824f918208746'
+         '98ddba06e3c3118de79cf8695153f319')
 
 build() {
   cd xmms2-${pkgver}/src/plugins/avcodec/
@@ -68,11 +72,13 @@ build() {
   patch -Np0 -i ${srcdir}/ffmpeg-0.11.diff
 
   cd ${srcdir}/${pkgname}-${pkgver}
+  patch -p1 < ../cdda.patch
+  patch -p1 < ../discid.patch
 
   # python2 fix
 #  sed -i 's_#!/usr/bin/env python_#!/usr/bin/env python2_' waf
-  sed -i 's|#include <cdio/cdda.h>|#include <cdio/paranoia/cdda.h>|' \
-	  src/plugins/cdda/cdda.c
+  #sed -i 's|#include <cdio/cdda.h>|#include <cdio/paranoia/cdda.h>|' \
+#	  src/plugins/cdda/cdda.c
 
   ./waf configure --prefix=/usr \
 	--with-optionals=python,launcher,xmmsclient++,xmmsclient++-glib,perl,ruby,nycli,pixmaps,et,mdns,medialib-updater \
