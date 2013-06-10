@@ -1,7 +1,8 @@
 # Contributor: Tau Tsao <realturner at gmail.com>
 pkgname=xrdp-git
-pkgver=20130220
-pkgrel=2
+_gitname=xrdp
+pkgver=1409.d3fb328
+pkgrel=1
 pkgdesc="An open source remote desktop protocol(rdp) server - GIT version"
 url="https://github.com/FreeRDP/xrdp"
 arch=('i686' 'x86_64')
@@ -14,36 +15,17 @@ conflicts=('xrdp')
 replaces=()
 backup=()
 options=()
-source=()
+source=("git://github.com/FreeRDP/xrdp.git")
 noextract=()
-md5sums=()
+md5sums=('SKIP')
 
-_gitroot="git://github.com/FreeRDP/xrdp.git"
-_gitname=xrdp
+pkgver() {
+  cd "$_gitname"
+  echo $(git rev-list --count HEAD).$(git rev-parse --short HEAD)
+}
 
 build() {
-  cd "$srcdir"
-  msg "Connecting to GIT server...."
-
-  if [ -d $srcdir/$_gitname ] ; then
-    cd $srcdir/$_gitname && git pull origin
-    msg "The local files are updated."
-  else
-    git clone $_gitroot $_gitname
-  fi
-
-  msg "GIT checkout done or server timeout"
-
-  msg "Starting make..."
-
-  rm -rf ${srcdir}/$_gitname-build
-  cp -a ${srcdir}/$_gitname{,-build}
-  cd ${srcdir}/$_gitname-build
-
-  #
-  # BUILD HERE
-  #
-
+  cd "$_gitname"
   sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' configure.ac
   ./bootstrap
   ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
@@ -51,17 +33,20 @@ build() {
 }
 
 package() {
-  cd ${srcdir}/$_gitname-build
+  cd "$_gitname"
   make DESTDIR=${pkgdir} install || return 1
+
   mv ${pkgdir}/usr/sbin/* ${pkgdir}/usr/bin/
   rm -rf ${pkgdir}/usr/sbin
+
   cd ${pkgdir}/etc
   mkdir rc.d/
   ln -s ../xrdp/xrdp.sh rc.d/rdpd
   sed -i 's|/usr/local/|/usr/|'  xrdp/xrdp.sh
   cd ${pkgdir}
   mkdir -p usr/lib/systemd/system
-  cp ${srcdir}/$_gitname-build/instfiles/*.service usr/lib/systemd/system
+
+  cp ${srcdir}/${_gitname}/instfiles/*.service usr/lib/systemd/system
   sed -i 's|/sysconfig/xrdp|/xrdp/xrdp.ini|' usr/lib/systemd/system/xrdp.service
   sed -i 's|/sysconfig/xrdp|/xrdp/xrdp.ini|' usr/lib/systemd/system/xrdp-sesman.service
 }
