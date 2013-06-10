@@ -18,7 +18,7 @@ install=$pkgname.install
 source=(http://www.jimpryor.net/linux/releases/${pkgname}-${pkgver}.tar.gz
         service)
 md5sums=('078833f3281f96944fc30392b1888326'
-         'e43c3d758384ac644f5e19f460ab5f46')
+         '2eefc422db24bf2ac38e3a16292ccdc4')
 
 build() {
     cd "$srcdir/${pkgname}-${pkgver}"
