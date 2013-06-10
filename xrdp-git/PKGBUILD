@@ -1,6 +1,6 @@
 # Contributor: Tau Tsao <realturner at gmail.com>
 pkgname=xrdp-git
-pkgver=20120930
+pkgver=20130220
 pkgrel=1
 pkgdesc="An open source remote desktop protocol(rdp) server - GIT version"
 url="https://github.com/FreeRDP/xrdp"
@@ -44,6 +44,7 @@ build() {
   # BUILD HERE
   #
 
+  sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' configure.ac
   ./bootstrap
   ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
   make || return 1
@@ -56,4 +57,9 @@ package() {
   mkdir rc.d/
   ln -s ../xrdp/xrdp.sh rc.d/rdpd
   sed -i 's|/usr/local/|/usr/|'  xrdp/xrdp.sh
-} 
+  cd ${pkgdir}
+  mkdir -p usr/lib/systemd/system
+  cp ${srcdir}/$_gitname-build/instfiles/*.service usr/lib/systemd/system
+  sed -i 's|/sysconfig/xrdp|/xrdp/xrdp.ini|' usr/lib/systemd/system/xrdp.service
+  sed -i 's|/sysconfig/xrdp|/xrdp/xrdp.ini|' usr/lib/systemd/system/xrdp-sesman.service
+}
