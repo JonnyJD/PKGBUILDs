@@ -5,7 +5,7 @@ pkgver=6.5.1
 pkgrel=1
 pkgdesc="Coverity Scan Self-Build"
 arch=('x86_64' 'i686')
-url="GP://scan.coverity.com/download"
+url="https://scan.coverity.com/download"
 license=('custom: non-free')
 optdepends=()
 provides=("cov-analysis=$pkgver")
