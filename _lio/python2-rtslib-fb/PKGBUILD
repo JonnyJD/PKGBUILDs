@@ -2,13 +2,13 @@
 pkgname=python2-rtslib-fb
 _pkgname=rtslib-fb
 pkgver=2.1.fb40
-pkgrel=2
+pkgrel=3
 epoch=
 pkgdesc="free branch version of the LIO target API"
 arch=('any')
 url="https://github.com/agrover/rtslib-fb"
 license=('Apache')
-depends=('python2-ipaddr' 'python2-ethtool')
+depends=()
 # this is incompatible to python2-rtslib
 provides=()
 conflicts=('python2-rtslib')
