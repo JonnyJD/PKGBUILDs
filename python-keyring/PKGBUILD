@@ -16,7 +16,8 @@ source=("http://pypi.python.org/packages/source/k/keyring/keyring-$pkgver.zip")
 checkdepends=('python-nose' 'python-mock')
 optdepends=('libgnome-keyring: Gnome integration'
             'python-gobject: Gnome integration'
-            'kdebindings-python: Kde integration')
+            'kdebindings-python: Kde integration'
+            'python-crypto: CLI keyring')
 md5sums=('05307327b902116656e04a89ddda790d')
 
 build() {
