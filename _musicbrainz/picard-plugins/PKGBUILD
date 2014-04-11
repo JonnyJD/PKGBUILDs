@@ -1,7 +1,7 @@
 # Contributor: Johannes Dewender  arch at JonnyJD dot net
 pkgname=picard-plugins
 pkgver=1.2
-pkgrel=6
+pkgrel=7
 pkgdesc="Plugins for MusicBrainz Picard"
 arch=('any')
 url="http://musicbrainz.org/doc/MusicBrainz_Picard/Plugins"
@@ -30,7 +30,7 @@ http://users.musicbrainz.org/~luks/picard-plugins/swapprefix.py
 http://users.musicbrainz.org/~luks/picard-plugins/titlecase.py
 http://users.musicbrainz.org/~luks/picard-plugins/tracks2clipboard.py
 )
-md5sums=('901ac9aefdf2773222d7a8fc3be8648a'
+md5sums=('a529674a3fc0919547b42d922c9b0259'
          'c0043da418d5bb67441e23dcbbfa62b0'
          'ced21c06d002b0d9bde3a145c1cca8be'
          '324fa53c1a81386fae1840430f95fb11'
