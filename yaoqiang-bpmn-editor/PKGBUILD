@@ -1,0 +1,35 @@
+# Maintainer: Michael Pusterhofer <pusterhofer@student.tugraz.at>
+pkgname="yaoqiang-bpmn-editor"
+pkgver="2.1.36"
+pkgrel=1
+epoch=
+pkgdesc="BPMN 2.0 and UML Editor"
+arch=(any)
+url="http://bpmn.sourceforge.net/"
+license=('GPL3')
+groups=()
+depends=(java-environment)
+makedepends=()
+checkdepends=()
+optdepends=()
+provides=()
+conflicts=()
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+source=(yaoqiang-bpmn-editor.desktop
+yaoqiang-bpmn-editor.png
+$pkgname-${pkgver}.jar::http://sourceforge.net/projects/bpmn/files/2.1/$pkgname-${pkgver}.jar/download)
+noextract=()
+
+md5sums=('d893c7a0e293a351c9e1363aeb3c473a'
+         '6672924faa8d9bd3fee21a9294dd1a21'
+         '9c35df3fa84ecb9a7ed3870ece6da42b')
+package() {
+    cd $srcdir
+    install -D $pkgname-${pkgver}.jar $pkgdir/opt/$pkgname/$pkgname-${pkgver}.jar
+    install -D $pkgname.desktop $pkgdir/usr/share/applications/$pkgname.desktop
+    install -D $pkgname.png $pkgdir/usr/share/pixmaps/$pkgname.png
+}
