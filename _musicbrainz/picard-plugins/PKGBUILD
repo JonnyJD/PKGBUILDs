@@ -1,7 +1,7 @@
 # Contributor: Johannes Dewender  arch at JonnyJD dot net
 pkgname=picard-plugins
 pkgver=1.2
-pkgrel=7
+pkgrel=8
 pkgdesc="Plugins for MusicBrainz Picard"
 arch=('any')
 url="http://musicbrainz.org/doc/MusicBrainz_Picard/Plugins"
@@ -26,10 +26,11 @@ http://users.musicbrainz.org/~luks/picard-plugins/release_type.py
 replaygain_init.py::http://users.musicbrainz.org/~luks/picard-plugins/replaygain/__init__.py
 http://users.musicbrainz.org/~luks/picard-plugins/replaygain/ui_options_replaygain.py
 http://users.musicbrainz.org/~luks/picard-plugins/replaygain/options_replaygain.ui
-http://users.musicbrainz.org/~luks/picard-plugins/swapprefix.py
+https://raw.githubusercontent.com/musicbrainz/picard/f387fa742dbdbc47819fcf2a307b8b85605d1c54/contrib/plugins/swapprefix.py
 http://users.musicbrainz.org/~luks/picard-plugins/titlecase.py
 http://users.musicbrainz.org/~luks/picard-plugins/tracks2clipboard.py
 )
+# swapprefix included in Picard > 1.2 (but not 1.2)
 md5sums=('a529674a3fc0919547b42d922c9b0259'
          'c0043da418d5bb67441e23dcbbfa62b0'
          'ced21c06d002b0d9bde3a145c1cca8be'
