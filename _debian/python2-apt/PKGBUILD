@@ -3,13 +3,13 @@ pkgname=python2-apt
 _pkgname=python-apt
 _python=python2
 pkgver=0.9.3.7
-pkgrel=1
+pkgrel=2
 pkgdesc="Python binding of libapt-pkg"
 arch=('i686' 'x86_64')
 url="http://packages.debian.org/sid/python-apt"
 license=('GPL2')
 depends=('python2' 'apt>=1.0.4')
-makedepends=()
+makedepends=('python2-distutils-extra')
 conflicts=()
 options=(!emptydirs)
 source=(http://ftp.debian.org/debian/pool/main/p/$_pkgname/${_pkgname}_$pkgver.tar.xz
