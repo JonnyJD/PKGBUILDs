@@ -3,7 +3,7 @@ pkgname=python2-apt
 _pkgname=python-apt
 _python=python2
 pkgver=0.9.3.7
-pkgrel=2
+pkgrel=3
 pkgdesc="Python binding of libapt-pkg"
 arch=('i686' 'x86_64')
 url="http://packages.debian.org/sid/python-apt"
@@ -19,14 +19,23 @@ sha256sums=('53ae9e40de02285bde3e57b62abf20aec37bebaff3ae96880873a55efe546215'
 
 build() {
   cd "$srcdir/$_pkgname-$pkgver"
-  $_python setup.py build
   patch -N -p1 < ../fix-pydebug.patch
+  sed -i -e 's|share/python-apt/templates|share/python2-apt/templates|g' \
+    setup.py
   sed -i -e '1s|/usr/bin/env python$|/usr/bin/env python2|' apt/auth.py
   sed -i -e '1s|/usr/bin/env python$|/usr/bin/env python2|' apt/progress/gtk2.py
+  $_python setup.py build_py
+  $_python setup.py build_ext
+  $_python setup.py build_i18n --domain=$pkgname
 }
 package() {
   cd "$srcdir/$_pkgname-$pkgver"
-  $_python setup.py install --root="$pkgdir/" --optimize=1
+  $_python setup.py install --skip-build --root="$pkgdir/" --optimize=1
+  cd build/mo
+  for lang in *; do
+    install -Dm644 "$lang/LC_MESSAGES/${pkgname}.mo" \
+      "$pkgdir/usr/share/locale/$lang/LC_MESSAGES/${pkgname}.mo"
+  done
 }
 
 # vim:set ts=2 sw=2 et:
