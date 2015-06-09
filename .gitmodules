@@ -10,3 +10,7 @@
 	path = _debian/dh-autoreconf
 	url = https://aur@aur4.archlinux.org/dh-autoreconf.git
 	pushurl = ssh+git://aur@aur4.archlinux.org/dh-autoreconf.git
+[submodule "tmake"]
+	path = tmake
+	url = https://aur@aur4.archlinux.org/tmake.git
+	pushurl = ssh+git://aur@aur4.archlinux.org/tmake.git
