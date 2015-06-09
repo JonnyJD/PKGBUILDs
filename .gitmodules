@@ -14,3 +14,7 @@
 	path = tmake
 	url = https://aur@aur4.archlinux.org/tmake.git
 	pushurl = ssh+git://aur@aur4.archlinux.org/tmake.git
+[submodule "statsvn"]
+	path = statsvn
+	url = https://aur@aur4.archlinux.org/statsvn.git
+	pushurl = ssh+git://aur@aur4.archlinux.org/statsvn.git
