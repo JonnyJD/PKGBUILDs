@@ -1,3 +1,6 @@
 [submodule "cccc"]
 	path = cccc
 	url = ssh+git://aur@aur4.archlinux.org/cccc.git
+[submodule "webalizer-xtended"]
+	path = webalizer-xtended
+	url = ssh+git://aur@aur4.archlinux.org/webalizer-xtended.git
