@@ -1,0 +1,3 @@
+[submodule "cccc"]
+	path = cccc
+	url = ssh+git://aur@aur4.archlinux.org/cccc.git
