@@ -1,9 +1,12 @@
 [submodule "cccc"]
 	path = cccc
-	url = ssh+git://aur@aur4.archlinux.org/cccc.git
+	url = https://aur@aur4.archlinux.org/cccc.git
+	pushurl = ssh+git://aur@aur4.archlinux.org/cccc.git
 [submodule "webalizer-xtended"]
 	path = webalizer-xtended
-	url = ssh+git://aur@aur4.archlinux.org/webalizer-xtended.git
+	url = https://aur@aur4.archlinux.org/webalizer-xtended.git
+	pushurl = ssh+git://aur@aur4.archlinux.org/webalizer-xtended.git
 [submodule "_debian/dh-autoreconf"]
 	path = _debian/dh-autoreconf
-	url = ssh+git://aur@aur4.archlinux.org/dh-autoreconf.git
+	url = https://aur@aur4.archlinux.org/dh-autoreconf.git
+	pushurl = ssh+git://aur@aur4.archlinux.org/dh-autoreconf.git
