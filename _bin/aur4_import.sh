@@ -10,6 +10,7 @@ gitignore=`pwd`/gitignore-pkg
 
 echo git subtree split --prefix=\"$prefix\" -b aur4/$pkg
 git subtree split --prefix="$prefix" -b aur4/$pkg || exit -1
+
 echo git filter-branch -f --tree-filter \
 	\"cp $gitignore .gitignore\; mksrcinfo\" -- aur4/$pkg
 git filter-branch -f --tree-filter "cp $gitignore .gitignore; mksrcinfo" \
@@ -19,5 +20,6 @@ git filter-branch -f --tree-filter "cp $gitignore .gitignore; mksrcinfo" \
 echo git push ssh+git://aur@aur4.archlinux.org/${pkg}.git/ aur4/$pkg:master
 git push ssh+git://aur@aur4.archlinux.org/${pkg}.git/ aur4/$pkg:master \
 	|| exit -1
+
 echo git branch -D aur4/$pkg
 git branch -D aur4/$pkg
