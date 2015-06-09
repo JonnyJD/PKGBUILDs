@@ -20,13 +20,16 @@ echo git submodule add ssh+git://aur@aur4.archlinux.org/${pkg}.git $path
 git submodule add https://aur@aur4.archlinux.org/${pkg}.git $path
 
 # for this we need to be in the root of the rppository
-echo git config --file=.gitmodules submodule.{$path}.pushurl \
+echo git config --file=.gitmodules submodule.${path}.pushurl \
 	ssh+git://aur@aur4.archlinux.org/${pkg}.git $path
-git config --file=.gitmodules submodule.{$path}.pushurl \
+git config --file=.gitmodules submodule.${path}.pushurl \
 	ssh+git://aur@aur4.archlinux.org/${pkg}.git $path
 
 echo git submodule sync
 git submodule sync
+
+echo git add .gitmodules
+git add .gitmodules
 
 echo cp -r \"${pkg}_aur4_bak/\"* \"$path\"
 cp -r "${pkg}_aur4_bak/"* "$path"
