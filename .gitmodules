@@ -18,3 +18,7 @@
 	path = statsvn
 	url = https://aur@aur4.archlinux.org/statsvn.git
 	pushurl = ssh+git://aur@aur4.archlinux.org/statsvn.git
+[submodule "voglperf"]
+	path = voglperf
+	url = https://aur@aur4.archlinux.org/voglperf.git
+	pushurl = ssh+git://aur@aur4.archlinux.org/voglperf.git
