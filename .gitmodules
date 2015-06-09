@@ -4,3 +4,6 @@
 [submodule "webalizer-xtended"]
 	path = webalizer-xtended
 	url = ssh+git://aur@aur4.archlinux.org/webalizer-xtended.git
+[submodule "_debian/dh-autoreconf"]
+	path = _debian/dh-autoreconf
+	url = ssh+git://aur@aur4.archlinux.org/dh-autoreconf.git
