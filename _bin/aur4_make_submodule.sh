@@ -10,9 +10,9 @@ echo git rm -r \"$path\"
 git rm -r "$path"
 echo mv \"$path\" \"${pkg}_aur4_bak\"
 mv "$path" "${pkg}_aur4_bak"
-echo git submodule add ssh+git://aur@aur4.archlinux.org/${pkg}.git $pkg
-git submodule add ssh+git://aur@aur4.archlinux.org/${pkg}.git $pkg
-echo cp -r \"${pkg}_aur4_bak/\"* "$path"
-cp -r "${pkg}_aur4_bak/"* \"$path\"
+echo git submodule add ssh+git://aur@aur4.archlinux.org/${pkg}.git $path
+git submodule add ssh+git://aur@aur4.archlinux.org/${pkg}.git $path
+echo cp -r \"${pkg}_aur4_bak/\"* \"$path\"
+cp -r "${pkg}_aur4_bak/"* "$path"
 echo rm -rf \"${pkg}_aur4_bak/\"
 rm -rf "${pkg}_aur4_bak"
