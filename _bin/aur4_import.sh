@@ -8,7 +8,7 @@ fi
 
 prefix=$1
 pkg=`basename $prefix`
-gitignore=`pwd`/gitignore-pkg
+gitignore=`pwd`/gitignore.pkg
 
 # create a new repository only for $pkg in the branch aur4/$pkg
 echo git subtree split --prefix=\"$prefix\" -b aur4/$pkg
