@@ -9,6 +9,8 @@ fi
 path=${1%/}		# the trailing / is removed
 pkg=`basename $path`
 email=`git config user.email`
+slash_path=${path//[^\/]}
+dir_depth=${#slash_path} # number of slashes in path
 
 # remove the path from version control
 echo git rm -r \"$path\"
@@ -39,6 +41,24 @@ git submodule sync
 # mark changes in .gitmodules to be committed
 echo git add .gitmodules
 git add .gitmodules
+
+
+# add mksrcinfo as pre-commit hook (OPTIONAL)
+
+echo pushd .git/modules/$path/hooks/
+pushd .git/modules/$path/hooks/
+
+# add more .. for deeper paths
+more_dots=""
+for i in $(seq 1 $dir_depth); do
+	more_dots+="../"
+done
+
+echo ln -s ../../../../${more_dots}pre-commit.pkg pre-commit
+ln -s ../../../../${more_dots}pre-commit.pkg pre-commit
+
+echo popd
+popd
 
 
 # restore uncommited/unversioned files from backup (OPTIONAL)

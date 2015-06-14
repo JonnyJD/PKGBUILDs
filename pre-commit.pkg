@@ -1,0 +1,3 @@
+#!/bin/bash
+mksrcinfo
+git add .SRCINFO
