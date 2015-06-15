@@ -22,3 +22,7 @@
 	path = voglperf
 	url = https://aur@aur4.archlinux.org/voglperf.git
 	pushurl = ssh+git://aur@aur4.archlinux.org/voglperf.git
+[submodule "ruby-svn"]
+	path = ruby-svn
+	url = https://aur@aur4.archlinux.org/ruby-svn.git
+	pushurl = ssh+git://aur@aur4.archlinux.org/ruby-svn.git
