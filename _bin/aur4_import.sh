@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ $# -lt 1 -o \( "$1" = "-h" -o "$1" = "--help" \) ]; then
 	echo "usage: $0 <path/to/package>"
@@ -23,14 +23,14 @@ git filter-branch -f --tree-filter "cat $gitignore >> .gitignore; mksrcinfo" \
 
 # allowing a (manual) rebase (OPTIONAL)
 echo starting shell to inspect and/or rebase the branch
-echo "(exit with exit)"
-git checkout aur4/$pkg
-bash
+git checkout aur4/$pkg || exit -1
+echo '(exit with "exit")'
+bash --init-file <(echo "gitk &")
 git checkout master
 
 # reset committer date, because that is used in the AUR changes
 echo git filter-branch --env-filter 'GIT_COMMITER_DATE=$GIT_AUTHOR_DATE; export GIT_COMMITTER_DATE'
-git filter-branch --env-filter 'GIT_COMMITER_DATE=$GIT_AUTHOR_DATE; export GIT_COMMITTER_DATE'
+git filter-branch -f --env-filter 'GIT_COMMITER_DATE=$GIT_AUTHOR_DATE; export GIT_COMMITTER_DATE' -- aur4/$pkg || exit -1
 
 
 #ssh aur@aur4.archlinux.org setup-repo $pkg
