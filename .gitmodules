@@ -30,3 +30,7 @@
 	path = _addon-sdk/addon-sdk-git
 	url = https://aur@aur4.archlinux.org/addon-sdk-git.git
 	pushurl = ssh+git://aur@aur4.archlinux.org/addon-sdk-git.git
+[submodule "holyspirit-svn"]
+	path = holyspirit-svn
+	url = https://aur@aur4.archlinux.org/holyspirit-svn.git
+	pushurl = ssh+git://aur@aur4.archlinux.org/holyspirit-svn.git
