@@ -17,7 +17,7 @@ git subtree split --prefix="$prefix" -b aur4/$pkg || exit -1
 # add/update .gitignore and .SRCINFO for every commit in the new branch
 echo git filter-branch -f --tree-filter \
 	\"cp $gitignore .gitignore\; mksrcinfo\" -- aur4/$pkg
-git filter-branch -f --tree-filter "cp $gitignore .gitignore; mksrcinfo" \
+git filter-branch -f --tree-filter "cat $gitignore >> .gitignore; mksrcinfo" \
 	-- aur4/$pkg || exit -1
 
 
