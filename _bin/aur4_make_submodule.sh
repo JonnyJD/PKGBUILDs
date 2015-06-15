@@ -81,3 +81,7 @@ pushd ${path}
 # return to original directory
 echo popd
 popd
+
+# commit to the repository (OPTIONAL)
+echo git commit -m "$pkg: convert to AUR 4 submodule"
+git commit -m "$pkg: convert to AUR 4 submodule"
