@@ -37,3 +37,7 @@
 [submodule "_debian/bzr-gtk"]
 	path = _debian/bzr-gtk
 	url = https://github.com/JonnyJD/bzr-gtk-pkg.git
+[submodule "_debian/bzr-gtk-bzr"]
+	path = _debian/bzr-gtk-bzr
+	url = https://aur@aur4.archlinux.org/bzr-gtk-bzr.git
+	pushurl = ssh+git://aur@aur4.archlinux.org/bzr-gtk-bzr.git
