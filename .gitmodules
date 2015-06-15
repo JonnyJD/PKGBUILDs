@@ -1,43 +1,33 @@
 [submodule "cccc"]
 	path = cccc
 	url = https://aur@aur4.archlinux.org/cccc.git
-	pushurl = ssh+git://aur@aur4.archlinux.org/cccc.git
 [submodule "webalizer-xtended"]
 	path = webalizer-xtended
 	url = https://aur@aur4.archlinux.org/webalizer-xtended.git
-	pushurl = ssh+git://aur@aur4.archlinux.org/webalizer-xtended.git
 [submodule "_debian/dh-autoreconf"]
 	path = _debian/dh-autoreconf
 	url = https://aur@aur4.archlinux.org/dh-autoreconf.git
-	pushurl = ssh+git://aur@aur4.archlinux.org/dh-autoreconf.git
 [submodule "tmake"]
 	path = tmake
 	url = https://aur@aur4.archlinux.org/tmake.git
-	pushurl = ssh+git://aur@aur4.archlinux.org/tmake.git
 [submodule "statsvn"]
 	path = statsvn
 	url = https://aur@aur4.archlinux.org/statsvn.git
-	pushurl = ssh+git://aur@aur4.archlinux.org/statsvn.git
 [submodule "voglperf"]
 	path = voglperf
 	url = https://aur@aur4.archlinux.org/voglperf.git
-	pushurl = ssh+git://aur@aur4.archlinux.org/voglperf.git
 [submodule "ruby-svn"]
 	path = ruby-svn
 	url = https://aur@aur4.archlinux.org/ruby-svn.git
-	pushurl = ssh+git://aur@aur4.archlinux.org/ruby-svn.git
 [submodule "_addon-sdk/addon-sdk-git"]
 	path = _addon-sdk/addon-sdk-git
 	url = https://aur@aur4.archlinux.org/addon-sdk-git.git
-	pushurl = ssh+git://aur@aur4.archlinux.org/addon-sdk-git.git
 [submodule "holyspirit-svn"]
 	path = holyspirit-svn
 	url = https://aur@aur4.archlinux.org/holyspirit-svn.git
-	pushurl = ssh+git://aur@aur4.archlinux.org/holyspirit-svn.git
 [submodule "_debian/bzr-gtk"]
 	path = _debian/bzr-gtk
 	url = https://github.com/JonnyJD/bzr-gtk-pkg.git
 [submodule "_debian/bzr-gtk-bzr"]
 	path = _debian/bzr-gtk-bzr
 	url = https://aur@aur4.archlinux.org/bzr-gtk-bzr.git
-	pushurl = ssh+git://aur@aur4.archlinux.org/bzr-gtk-bzr.git

@@ -26,21 +26,12 @@ git submodule add https://aur@aur4.archlinux.org/${pkg}.git $path
 
 
 # add a separate pushurl for write access
-# (OPTIONAL, you can also just use the url above)
-
+# (OPTIONAL, you can also just use this url above)
 # (we need to be in the root of the repository to find .gitmodules)
-echo git config --file=.gitmodules submodule.${path}.pushurl \
+echo git config --file=.git/modules/$path/config remote.origin.pushurl \
 	ssh+git://aur@aur4.archlinux.org/${pkg}.git $path
-git config --file=.gitmodules submodule.${path}.pushurl \
+git config --file=.git/modules/$path/config remote.origin.pushurl \
 	ssh+git://aur@aur4.archlinux.org/${pkg}.git $path
-
-# write urls from .gitmodules to separate .git/modules/*/config files
-echo git submodule sync
-git submodule sync
-
-# mark changes in .gitmodules to be committed
-echo git add .gitmodules
-git add .gitmodules
 
 
 # add mksrcinfo as pre-commit hook (OPTIONAL)
