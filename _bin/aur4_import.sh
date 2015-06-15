@@ -20,6 +20,15 @@ echo git filter-branch -f --tree-filter \
 git filter-branch -f --tree-filter "cp $gitignore .gitignore; mksrcinfo" \
 	-- aur4/$pkg || exit -1
 
+
+# allowing a (manual) rebase (OPTIONAL)
+echo starting shell to inspect and/or rebase the branch
+echo "(exit with exit)"
+git checkout aur4/$pkg
+bash
+git checkout master
+
+
 #ssh aur@aur4.archlinux.org setup-repo $pkg
 
 # push the new branch to the repo on AUR 4
