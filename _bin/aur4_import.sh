@@ -28,6 +28,10 @@ git checkout aur4/$pkg
 bash
 git checkout master
 
+# reset committer date, because that is used in the AUR changes
+echo git filter-branch --env-filter 'GIT_COMMITER_DATE=$GIT_AUTHOR_DATE; export GIT_COMMITTER_DATE'
+git filter-branch --env-filter 'GIT_COMMITER_DATE=$GIT_AUTHOR_DATE; export GIT_COMMITTER_DATE'
+
 
 #ssh aur@aur4.archlinux.org setup-repo $pkg
 
