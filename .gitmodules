@@ -26,3 +26,7 @@
 	path = ruby-svn
 	url = https://aur@aur4.archlinux.org/ruby-svn.git
 	pushurl = ssh+git://aur@aur4.archlinux.org/ruby-svn.git
+[submodule "_addon-sdk/addon-sdk-git"]
+	path = _addon-sdk/addon-sdk-git
+	url = https://aur@aur4.archlinux.org/addon-sdk-git.git
+	pushurl = ssh+git://aur@aur4.archlinux.org/addon-sdk-git.git
