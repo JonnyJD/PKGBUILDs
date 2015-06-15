@@ -27,7 +27,7 @@
 	url = https://aur@aur4.archlinux.org/holyspirit-svn.git
 [submodule "_debian/bzr-gtk"]
 	path = _debian/bzr-gtk
-	url = https://github.com/JonnyJD/bzr-gtk-pkg.git
+	url = https://aur@aur4.archlinux.org/bzr-gtk.git
 [submodule "_debian/bzr-gtk-bzr"]
 	path = _debian/bzr-gtk-bzr
 	url = https://aur@aur4.archlinux.org/bzr-gtk-bzr.git
