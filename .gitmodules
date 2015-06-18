@@ -67,3 +67,6 @@
 [submodule "_debian/python-debian"]
 	path = _debian/python-debian
 	url = https://aur@aur4.archlinux.org/python-debian.git
+[submodule "_vimwiki/vim-vimwiki"]
+	path = _vimwiki/vim-vimwiki
+	url = https://aur@aur4.archlinux.org/vim-vimwiki.git
