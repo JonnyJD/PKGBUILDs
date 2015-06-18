@@ -36,4 +36,4 @@
 	url = https://aur@aur4.archlinux.org/python2-ethtool.git
 [submodule "_debian/bzr-gtk-gtk2"]
 	path = _debian/bzr-gtk-gtk2
-	url = https://aur@aur4.archlinux.org/bzr-gtk.git
+	url = https://aur@aur4.archlinux.org/bzr-gtk-gtk2.git
