@@ -46,3 +46,6 @@
 [submodule "_musicbrainz/python-discid"]
 	path = _musicbrainz/python-discid
 	url = https://aur@aur4.archlinux.org/python-discid.git
+[submodule "_musicbrainz/python-musicbrainzngs"]
+	path = _musicbrainz/python-musicbrainzngs
+	url = https://aur@aur4.archlinux.org/python-musicbrainzngs.git
