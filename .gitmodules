@@ -73,3 +73,6 @@
 [submodule "_musicbrainz/picard-plugins-search"]
 	path = _musicbrainz/picard-plugins-search
 	url = https://aur@aur4.archlinux.org/picard-plugins-search.git
+[submodule "_debian/bzr-explorer"]
+	path = _debian/bzr-explorer
+	url = https://aur@aur4.archlinux.org/bzr-explorer.git
