@@ -64,3 +64,6 @@
 [submodule "_debian/dh-make"]
 	path = _debian/dh-make
 	url = https://aur@aur4.archlinux.org/dh-make.git
+[submodule "_debian/python-debian"]
+	path = _debian/python-debian
+	url = https://aur@aur4.archlinux.org/python-debian.git
