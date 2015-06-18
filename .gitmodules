@@ -55,3 +55,6 @@
 [submodule "_musicbrainz/acoustid-fingerprinter"]
 	path = _musicbrainz/acoustid-fingerprinter
 	url = https://aur@aur4.archlinux.org/acoustid-fingerprinter.git
+[submodule "_suse/rpm-org"]
+	path = _suse/rpm-org
+	url = https://aur@aur4.archlinux.org/rpm-org.git
