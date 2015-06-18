@@ -52,3 +52,6 @@
 [submodule "_musicbrainz/isrcsubmit"]
 	path = _musicbrainz/isrcsubmit
 	url = https://aur@aur4.archlinux.org/isrcsubmit.git
+[submodule "_musicbrainz/acoustid-fingerprinter"]
+	path = _musicbrainz/acoustid-fingerprinter
+	url = https://aur@aur4.archlinux.org/acoustid-fingerprinter.git
