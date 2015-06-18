@@ -40,3 +40,6 @@
 [submodule "_debian/bzrlog"]
 	path = _debian/bzrlog
 	url = https://aur@aur4.archlinux.org/bzrlog.git
+[submodule "_debian/bzr-stats"]
+	path = _debian/bzr-stats
+	url = https://aur@aur4.archlinux.org/bzr-stats.git
