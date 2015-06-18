@@ -37,3 +37,6 @@
 [submodule "_debian/bzr-gtk-gtk2"]
 	path = _debian/bzr-gtk-gtk2
 	url = https://aur@aur4.archlinux.org/bzr-gtk-gtk2.git
+[submodule "_debian/bzrlog"]
+	path = _debian/bzrlog
+	url = https://aur@aur4.archlinux.org/bzrlog.git
