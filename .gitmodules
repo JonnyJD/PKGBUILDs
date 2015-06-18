@@ -58,3 +58,6 @@
 [submodule "_suse/rpm-org"]
 	path = _suse/rpm-org
 	url = https://aur@aur4.archlinux.org/rpm-org.git
+[submodule "_debian/qbzr"]
+	path = _debian/qbzr
+	url = https://aur@aur4.archlinux.org/qbzr.git
