@@ -49,3 +49,6 @@
 [submodule "_musicbrainz/python-musicbrainzngs"]
 	path = _musicbrainz/python-musicbrainzngs
 	url = https://aur@aur4.archlinux.org/python-musicbrainzngs.git
+[submodule "_musicbrainz/isrcsubmit"]
+	path = _musicbrainz/isrcsubmit
+	url = https://aur@aur4.archlinux.org/isrcsubmit.git
