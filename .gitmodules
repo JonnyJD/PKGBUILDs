@@ -61,3 +61,6 @@
 [submodule "_debian/qbzr"]
 	path = _debian/qbzr
 	url = https://aur@aur4.archlinux.org/qbzr.git
+[submodule "_debian/dh-make"]
+	path = _debian/dh-make
+	url = https://aur@aur4.archlinux.org/dh-make.git
