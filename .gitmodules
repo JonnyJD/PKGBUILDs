@@ -43,3 +43,6 @@
 [submodule "_debian/bzr-stats"]
 	path = _debian/bzr-stats
 	url = https://aur@aur4.archlinux.org/bzr-stats.git
+[submodule "_musicbrainz/python-discid"]
+	path = _musicbrainz/python-discid
+	url = https://aur@aur4.archlinux.org/python-discid.git
