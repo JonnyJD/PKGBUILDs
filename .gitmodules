@@ -112,3 +112,6 @@
 [submodule "_musicbrainz/picard-plugins-git"]
 	path = _musicbrainz/picard-plugins-git
 	url = https://aur@aur4.archlinux.org/picard-plugins-git.git
+[submodule "_musicbrainz/python2-musicbrainzngs-git"]
+	path = _musicbrainz/python2-musicbrainzngs-git
+	url = https://aur@aur4.archlinux.org/python2-musicbrainzngs-git.git
