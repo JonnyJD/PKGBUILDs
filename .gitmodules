@@ -82,3 +82,6 @@
 [submodule "_lio/python-configshell-fb"]
 	path = _lio/python-configshell-fb
 	url = https://aur@aur4.archlinux.org/python-configshell-fb.git
+[submodule "_lio/targetcli-fb"]
+	path = _lio/targetcli-fb
+	url = https://aur@aur4.archlinux.org/targetcli-fb.git
