@@ -118,3 +118,6 @@
 [submodule "_musicbrainz/php-musicbrainz"]
 	path = _musicbrainz/php-musicbrainz
 	url = https://aur@aur4.archlinux.org/php-musicbrainz.git
+[submodule "php-requests"]
+	path = php-requests
+	url = https://aur@aur4.archlinux.org/php-requests.git
