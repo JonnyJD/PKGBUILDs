@@ -103,3 +103,6 @@
 [submodule "shunit2"]
 	path = shunit2
 	url = https://aur@aur4.archlinux.org/shunit2.git
+[submodule "_debian/perl-file-fcntllock"]
+	path = _debian/perl-file-fcntllock
+	url = https://aur@aur4.archlinux.org/perl-file-fcntllock.git
