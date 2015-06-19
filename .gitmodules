@@ -106,3 +106,6 @@
 [submodule "_debian/perl-file-fcntllock"]
 	path = _debian/perl-file-fcntllock
 	url = https://aur@aur4.archlinux.org/perl-file-fcntllock.git
+[submodule "_musicbrainz/picard-plugins-aux"]
+	path = _musicbrainz/picard-plugins-aux
+	url = https://aur@aur4.archlinux.org/picard-plugins-aux.git
