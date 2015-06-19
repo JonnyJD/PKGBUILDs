@@ -88,3 +88,6 @@
 [submodule "_lio/lio-snmp"]
 	path = _lio/lio-snmp
 	url = https://aur@aur4.archlinux.org/lio-snmp.git
+[submodule "_lio/lio-utils"]
+	path = _lio/lio-utils
+	url = https://aur@aur4.archlinux.org/lio-utils.git
