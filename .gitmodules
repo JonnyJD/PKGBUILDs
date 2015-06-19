@@ -97,3 +97,6 @@
 [submodule "_lio/python2-rtslib"]
 	path = _lio/python2-rtslib
 	url = https://aur@aur4.archlinux.org/python2-rtslib.git
+[submodule "_lio/targetcli"]
+	path = _lio/targetcli
+	url = https://aur@aur4.archlinux.org/targetcli.git
