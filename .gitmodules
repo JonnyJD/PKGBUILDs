@@ -85,3 +85,6 @@
 [submodule "_lio/targetcli-fb"]
 	path = _lio/targetcli-fb
 	url = https://aur@aur4.archlinux.org/targetcli-fb.git
+[submodule "_lio/lio-snmp"]
+	path = _lio/lio-snmp
+	url = https://aur@aur4.archlinux.org/lio-snmp.git
