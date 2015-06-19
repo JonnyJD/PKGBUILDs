@@ -79,3 +79,6 @@
 [submodule "_lio/python-rtslib-fb"]
 	path = _lio/python-rtslib-fb
 	url = https://aur@aur4.archlinux.org/python-rtslib-fb.git
+[submodule "_lio/python-configshell-fb"]
+	path = _lio/python-configshell-fb
+	url = https://aur@aur4.archlinux.org/python-configshell-fb.git
