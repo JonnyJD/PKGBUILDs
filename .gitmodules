@@ -91,3 +91,6 @@
 [submodule "_lio/lio-utils"]
 	path = _lio/lio-utils
 	url = https://aur@aur4.archlinux.org/lio-utils.git
+[submodule "_lio/python2-configshell"]
+	path = _lio/python2-configshell
+	url = https://aur@aur4.archlinux.org/python2-configshell.git
