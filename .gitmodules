@@ -115,3 +115,6 @@
 [submodule "_musicbrainz/python-musicbrainzngs-git"]
 	path = _musicbrainz/python-musicbrainzngs-git
 	url = https://aur@aur4.archlinux.org/python-musicbrainzngs-git.git/
+[submodule "_musicbrainz/php-musicbrainz"]
+	path = _musicbrainz/php-musicbrainz
+	url = https://aur@aur4.archlinux.org/php-musicbrainz.git
