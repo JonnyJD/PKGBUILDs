@@ -100,3 +100,6 @@
 [submodule "_lio/targetcli"]
 	path = _lio/targetcli
 	url = https://aur@aur4.archlinux.org/targetcli.git
+[submodule "shunit2"]
+	path = shunit2
+	url = https://aur@aur4.archlinux.org/shunit2.git
