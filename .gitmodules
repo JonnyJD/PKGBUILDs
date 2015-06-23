@@ -121,3 +121,6 @@
 [submodule "php-requests"]
 	path = php-requests
 	url = https://aur@aur4.archlinux.org/php-requests.git
+[submodule "lib32-ffmpeg"]
+	path = lib32-ffmpeg
+	url = https://aur@aur4.archlinux.org/lib32-ffmpeg.git
