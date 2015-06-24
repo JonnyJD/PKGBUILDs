@@ -190,3 +190,6 @@
 [submodule "_debian/pristine-tar"]
 	path = _debian/pristine-tar
 	url = https://aur@aur4.archlinux.org/pristine-tar.git
+[submodule "_debian/bzr-builddeb"]
+	path = _debian/bzr-builddeb
+	url = https://aur@aur4.archlinux.org/bzr-builddeb.git
