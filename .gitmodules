@@ -181,3 +181,6 @@
 [submodule "_musicbrainz/essentia-acousticbrainz"]
 	path = _musicbrainz/essentia-acousticbrainz
 	url = https://aur@aur4.archlinux.org/essentia-acousticbrainz.git
+[submodule "_debian/debhelper-python2"]
+	path = _debian/debhelper-python2
+	url = https://aur@aur4.archlinux.org/debhelper-python2.git
