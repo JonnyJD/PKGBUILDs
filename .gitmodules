@@ -138,4 +138,4 @@
 	url = https://aur@aur4.archlinux.org/obs-build-git.git
 [submodule "_suse/obs-build"]
 	path = _suse/obs-build
-	url = https://aur@aur4.archlinux.org/obs-build-git.git
+	url = https://aur@aur4.archlinux.org/obs-build.git
