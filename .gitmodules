@@ -145,3 +145,6 @@
 [submodule "_suse/obs-service-format_spec_file"]
 	path = _suse/obs-service-format_spec_file
 	url = https://aur@aur4.archlinux.org/obs-service-format_spec_file.git
+[submodule "_debian/python2-support"]
+	path = _debian/python2-support
+	url = https://aur@aur4.archlinux.org/python2-support.git
