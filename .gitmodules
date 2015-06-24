@@ -142,3 +142,6 @@
 [submodule "_suse/obs-service-source_validator"]
 	path = _suse/obs-service-source_validator
 	url = https://aur@aur4.archlinux.org/obs-service-source_validator.git
+[submodule "_suse/obs-service-format_spec_file"]
+	path = _suse/obs-service-format_spec_file
+	url = https://aur@aur4.archlinux.org/obs-service-format_spec_file.git
