@@ -157,3 +157,6 @@
 [submodule "python2-pymetrics"]
 	path = python2-pymetrics
 	url = https://aur@aur4.archlinux.org/python2-pymetrics.git
+[submodule "_debian/python-apt"]
+	path = _debian/python-apt
+	url = https://aur@aur4.archlinux.org/python-apt.git
