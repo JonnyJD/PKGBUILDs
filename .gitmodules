@@ -178,3 +178,6 @@
 [submodule "_musicbrainz/image-id"]
 	path = _musicbrainz/image-id
 	url = https://aur@aur4.archlinux.org/image-id.git
+[submodule "_musicbrainz/essentia-acousticbrainz"]
+	path = _musicbrainz/essentia-acousticbrainz
+	url = https://aur@aur4.archlinux.org/essentia-acousticbrainz.git
