@@ -148,3 +148,6 @@
 [submodule "_debian/python2-support"]
 	path = _debian/python2-support
 	url = https://aur@aur4.archlinux.org/python2-support.git
+[submodule "_debian/python2-debianbts"]
+	path = _debian/python2-debianbts
+	url = https://aur@aur4.archlinux.org/python2-debianbts.git
