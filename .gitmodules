@@ -184,3 +184,6 @@
 [submodule "_debian/debhelper-python2"]
 	path = _debian/debhelper-python2
 	url = https://aur@aur4.archlinux.org/debhelper-python2.git
+[submodule "_coverity/coverity-submit"]
+	path = _coverity/coverity-submit
+	url = https://aur@aur4.archlinux.org/coverity-submit.git
