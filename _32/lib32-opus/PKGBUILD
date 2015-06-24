@@ -1,15 +1,15 @@
-# Maintainer: josephgbr <rafael.f.f1@gmail.com>
+# Contributor: Johannes Dewender  arch at JonnyJD dot net
+# Contributor: josephgbr <rafael.f.f1@gmail.com>
 
 _pkgbase=opus
 pkgname=lib32-$_pkgbase
 pkgver=1.1
-pkgrel=1
-pkgdesc="Codec designed for interactive speech and audio transmission over the Internet"
+pkgrel=2
+pkgdesc="Codec designed for interactive speech and audio transmission over the Internet (32 bit)"
 arch=('x86_64')
 url="http://www.opus-codec.org/"
-license=('custom')
+license=('BSD')
 depends=('lib32-glibc')
-options=('!libtool')
 source=("http://downloads.xiph.org/releases/${_pkgbase}/${_pkgbase}-${pkgver}.tar.gz")
 md5sums=('c5a8cf7c0b066759542bc4ca46817ac6')
 
@@ -18,16 +18,22 @@ build() {
   export CXX='g++ -m32'
   export PKG_CONFIG_PATH='/usr/lib32/pkgconfig'
   
-  cd ${_pkgbase}-${pkgver}
-  ./configure --prefix=/usr --enable-custom-modes --libdir=/usr/lib32
+  cd "$srcdir/$_pkgbase-$pkgver"
+  ./configure --prefix=/usr --libdir=/usr/lib32 \
+	--enable-custom-modes \
+	--disable-static
   make
 }
 
+check() {
+  cd "$srcdir/$_pkgbase-$pkgver"
+  make check
+}
+
 package() {
-  cd ${_pkgbase}-${pkgver}
+  cd "$srcdir/$_pkgbase-$pkgver"
   make DESTDIR="${pkgdir}" install
   rm -rf "${pkgdir}"/usr/{include,share}
   install -dm755 "${pkgdir}"/usr/share/licenses
   ln -s $_pkgbase "${pkgdir}"/usr/share/licenses/$pkgname
-  
 }
