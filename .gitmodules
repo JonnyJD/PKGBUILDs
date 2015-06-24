@@ -139,3 +139,6 @@
 [submodule "_suse/obs-build"]
 	path = _suse/obs-build
 	url = https://aur@aur4.archlinux.org/obs-build.git
+[submodule "_suse/obs-service-source_validator"]
+	path = _suse/obs-service-source_validator
+	url = https://aur@aur4.archlinux.org/obs-service-source_validator.git
