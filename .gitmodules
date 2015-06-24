@@ -160,3 +160,6 @@
 [submodule "_debian/python-apt"]
 	path = _debian/python-apt
 	url = https://aur@aur4.archlinux.org/python-apt.git
+[submodule "_debian/distro-info-data"]
+	path = _debian/distro-info-data
+	url = https://aur@aur4.archlinux.org/distro-info-data.git
