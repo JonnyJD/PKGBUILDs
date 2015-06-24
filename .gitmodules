@@ -163,3 +163,6 @@
 [submodule "_debian/distro-info-data"]
 	path = _debian/distro-info-data
 	url = https://aur@aur4.archlinux.org/distro-info-data.git
+[submodule "_debian/distro-info"]
+	path = _debian/distro-info
+	url = https://aur@aur4.archlinux.org/distro-info.git
