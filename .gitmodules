@@ -130,3 +130,6 @@
 [submodule "_32/lib32-libass"]
 	path = _32/lib32-libass
 	url = https://aur@aur4.archlinux.org/lib32-libass.git
+[submodule "_32/lib32-schroedinger"]
+	path = _32/lib32-schroedinger
+	url = https://aur@aur4.archlinux.org/lib32-schroedinger.git
