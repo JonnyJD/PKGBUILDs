@@ -175,3 +175,6 @@
 [submodule "pnapi"]
 	path = pnapi
 	url = https://aur@aur4.archlinux.org/pnapi.git
+[submodule "_musicbrainz/image-id"]
+	path = _musicbrainz/image-id
+	url = https://aur@aur4.archlinux.org/image-id.git
