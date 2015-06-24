@@ -127,3 +127,6 @@
 [submodule "_32/lib32-lame"]
 	path = _32/lib32-lame
 	url = https://aur@aur4.archlinux.org/lib32-lame.git
+[submodule "_32/lib32-libass"]
+	path = _32/lib32-libass
+	url = https://aur@aur4.archlinux.org/lib32-libass.git
