@@ -172,3 +172,6 @@
 [submodule "lola1"]
 	path = lola1
 	url = https://aur@aur4.archlinux.org/lola1.git
+[submodule "pnapi"]
+	path = pnapi
+	url = https://aur@aur4.archlinux.org/pnapi.git
