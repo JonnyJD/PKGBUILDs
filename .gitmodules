@@ -193,3 +193,6 @@
 [submodule "_debian/bzr-builddeb"]
 	path = _debian/bzr-builddeb
 	url = https://aur@aur4.archlinux.org/bzr-builddeb.git
+[submodule "_musicbrainz/acousticbrainz-client-git"]
+	path = _musicbrainz/acousticbrainz-client-git
+	url = https://aur@aur4.archlinux.org/acousticbrainz-client-git.git
