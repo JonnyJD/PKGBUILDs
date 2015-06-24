@@ -187,3 +187,6 @@
 [submodule "_coverity/coverity-submit"]
 	path = _coverity/coverity-submit
 	url = https://aur@aur4.archlinux.org/coverity-submit.git
+[submodule "_debian/pristine-tar"]
+	path = _debian/pristine-tar
+	url = https://aur@aur4.archlinux.org/pristine-tar.git
