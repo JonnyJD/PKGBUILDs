@@ -154,3 +154,6 @@
 [submodule "_debian/reportbug"]
 	path = _debian/reportbug
 	url = https://aur@aur4.archlinux.org/reportbug.git
+[submodule "python2-pymetrics"]
+	path = python2-pymetrics
+	url = https://aur@aur4.archlinux.org/python2-pymetrics.git
