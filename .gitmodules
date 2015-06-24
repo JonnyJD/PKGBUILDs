@@ -169,3 +169,6 @@
 [submodule "_debian/debhelper-python"]
 	path = _debian/debhelper-python
 	url = https://aur@aur4.archlinux.org/debhelper-python.git
+[submodule "lola1"]
+	path = lola1
+	url = https://aur@aur4.archlinux.org/lola1.git
