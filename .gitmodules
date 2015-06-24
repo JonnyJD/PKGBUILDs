@@ -166,3 +166,6 @@
 [submodule "_debian/distro-info"]
 	path = _debian/distro-info
 	url = https://aur@aur4.archlinux.org/distro-info.git
+[submodule "_debian/debhelper-python"]
+	path = _debian/debhelper-python
+	url = https://aur@aur4.archlinux.org/debhelper-python.git
