@@ -196,3 +196,6 @@
 [submodule "_musicbrainz/acousticbrainz-client-git"]
 	path = _musicbrainz/acousticbrainz-client-git
 	url = https://aur@aur4.archlinux.org/acousticbrainz-client-git.git
+[submodule "_musicbrainz/acousticbrainz-client"]
+	path = _musicbrainz/acousticbrainz-client
+	url = https://aur@aur4.archlinux.org/acousticbrainz-client.git/
