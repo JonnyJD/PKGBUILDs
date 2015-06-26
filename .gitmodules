@@ -199,3 +199,6 @@
 [submodule "_musicbrainz/acousticbrainz-client"]
 	path = _musicbrainz/acousticbrainz-client
 	url = https://aur@aur4.archlinux.org/acousticbrainz-client.git/
+[submodule "_32/lib32-libx264"]
+	path = _32/lib32-libx264
+	url = https://aur@aur4.archlinux.org/lib32-libx264.git/
