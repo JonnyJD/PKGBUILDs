@@ -20,4 +20,4 @@ as submodules.
 .. _AUR: https://aur.archlinux.org/
 .. _Arch Linux: https://www.archlinux.org/
 .. _AUR 4: https://aur4.archlinux.org/
-.. __bin: https://github.com/JonnyJD/PKGBUILDs/tree/master/_bin
+.. _\_bin: https://github.com/JonnyJD/PKGBUILDs/tree/master/_bin
