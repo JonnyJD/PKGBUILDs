@@ -9,6 +9,16 @@ ldd_check() {
 	fi
 }
 
+if [ -n "$1" ]; then
+	ldd_check $1
+	if [ -z "$output" ]; then
+		echo everything fine with $1
+		exit 0
+	else
+		exit -1
+	fi
+fi
+
 echo
 echo "checking 32 bit libraries.."
 echo
