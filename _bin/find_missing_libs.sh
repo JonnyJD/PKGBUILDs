@@ -20,6 +20,11 @@ if [ -n "$1" ]; then
 fi
 
 echo
+echo "running testdb.."
+echo
+testdb
+echo
+
 echo "checking 32 bit libraries.."
 echo
 for lib in /usr/lib32/*.so; do
