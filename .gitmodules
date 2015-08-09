@@ -1,210 +1,210 @@
 [submodule "cccc"]
 	path = cccc
-	url = https://aur@aur4.archlinux.org/cccc.git
+	url = https://aur@aur.archlinux.org/cccc.git
 [submodule "webalizer-xtended"]
 	path = webalizer-xtended
-	url = https://aur@aur4.archlinux.org/webalizer-xtended.git
+	url = https://aur@aur.archlinux.org/webalizer-xtended.git
 [submodule "_debian/dh-autoreconf"]
 	path = _debian/dh-autoreconf
-	url = https://aur@aur4.archlinux.org/dh-autoreconf.git
+	url = https://aur@aur.archlinux.org/dh-autoreconf.git
 [submodule "tmake"]
 	path = tmake
-	url = https://aur@aur4.archlinux.org/tmake.git
+	url = https://aur@aur.archlinux.org/tmake.git
 [submodule "statsvn"]
 	path = statsvn
-	url = https://aur@aur4.archlinux.org/statsvn.git
+	url = https://aur@aur.archlinux.org/statsvn.git
 [submodule "voglperf"]
 	path = voglperf
-	url = https://aur@aur4.archlinux.org/voglperf.git
+	url = https://aur@aur.archlinux.org/voglperf.git
 [submodule "ruby-svn"]
 	path = ruby-svn
-	url = https://aur@aur4.archlinux.org/ruby-svn.git
+	url = https://aur@aur.archlinux.org/ruby-svn.git
 [submodule "_addon-sdk/addon-sdk-git"]
 	path = _addon-sdk/addon-sdk-git
-	url = https://aur@aur4.archlinux.org/addon-sdk-git.git
+	url = https://aur@aur.archlinux.org/addon-sdk-git.git
 [submodule "holyspirit-svn"]
 	path = holyspirit-svn
-	url = https://aur@aur4.archlinux.org/holyspirit-svn.git
+	url = https://aur@aur.archlinux.org/holyspirit-svn.git
 [submodule "_debian/bzr-gtk"]
 	path = _debian/bzr-gtk
-	url = https://aur@aur4.archlinux.org/bzr-gtk.git
+	url = https://aur@aur.archlinux.org/bzr-gtk.git
 [submodule "_debian/bzr-gtk-bzr"]
 	path = _debian/bzr-gtk-bzr
-	url = https://aur@aur4.archlinux.org/bzr-gtk-bzr.git
+	url = https://aur@aur.archlinux.org/bzr-gtk-bzr.git
 [submodule "_lio/python2-ethtool"]
 	path = _lio/python2-ethtool
-	url = https://aur@aur4.archlinux.org/python2-ethtool.git
+	url = https://aur@aur.archlinux.org/python2-ethtool.git
 [submodule "_debian/bzr-gtk-gtk2"]
 	path = _debian/bzr-gtk-gtk2
-	url = https://aur@aur4.archlinux.org/bzr-gtk-gtk2.git
+	url = https://aur@aur.archlinux.org/bzr-gtk-gtk2.git
 [submodule "_debian/bzrlog"]
 	path = _debian/bzrlog
-	url = https://aur@aur4.archlinux.org/bzrlog.git
+	url = https://aur@aur.archlinux.org/bzrlog.git
 [submodule "_debian/bzr-stats"]
 	path = _debian/bzr-stats
-	url = https://aur@aur4.archlinux.org/bzr-stats.git
+	url = https://aur@aur.archlinux.org/bzr-stats.git
 [submodule "_musicbrainz/python-discid"]
 	path = _musicbrainz/python-discid
-	url = https://aur@aur4.archlinux.org/python-discid.git
+	url = https://aur@aur.archlinux.org/python-discid.git
 [submodule "_musicbrainz/python-musicbrainzngs"]
 	path = _musicbrainz/python-musicbrainzngs
-	url = https://aur@aur4.archlinux.org/python-musicbrainzngs.git
+	url = https://aur@aur.archlinux.org/python-musicbrainzngs.git
 [submodule "_musicbrainz/isrcsubmit"]
 	path = _musicbrainz/isrcsubmit
-	url = https://aur@aur4.archlinux.org/isrcsubmit.git
+	url = https://aur@aur.archlinux.org/isrcsubmit.git
 [submodule "_musicbrainz/acoustid-fingerprinter"]
 	path = _musicbrainz/acoustid-fingerprinter
-	url = https://aur@aur4.archlinux.org/acoustid-fingerprinter.git
+	url = https://aur@aur.archlinux.org/acoustid-fingerprinter.git
 [submodule "_suse/rpm-org"]
 	path = _suse/rpm-org
-	url = https://aur@aur4.archlinux.org/rpm-org.git
+	url = https://aur@aur.archlinux.org/rpm-org.git
 [submodule "_debian/qbzr"]
 	path = _debian/qbzr
-	url = https://aur@aur4.archlinux.org/qbzr.git
+	url = https://aur@aur.archlinux.org/qbzr.git
 [submodule "_debian/dh-make"]
 	path = _debian/dh-make
-	url = https://aur@aur4.archlinux.org/dh-make.git
+	url = https://aur@aur.archlinux.org/dh-make.git
 [submodule "_debian/python-debian"]
 	path = _debian/python-debian
-	url = https://aur@aur4.archlinux.org/python-debian.git
+	url = https://aur@aur.archlinux.org/python-debian.git
 [submodule "_vimwiki/vim-vimwiki"]
 	path = _vimwiki/vim-vimwiki
-	url = https://aur@aur4.archlinux.org/vim-vimwiki.git
+	url = https://aur@aur.archlinux.org/vim-vimwiki.git
 [submodule "_musicbrainz/picard-plugins-search"]
 	path = _musicbrainz/picard-plugins-search
-	url = https://aur@aur4.archlinux.org/picard-plugins-search.git
+	url = https://aur@aur.archlinux.org/picard-plugins-search.git
 [submodule "_debian/bzr-explorer"]
 	path = _debian/bzr-explorer
-	url = https://aur@aur4.archlinux.org/bzr-explorer.git
+	url = https://aur@aur.archlinux.org/bzr-explorer.git
 [submodule "_lio/python-rtslib-fb"]
 	path = _lio/python-rtslib-fb
-	url = https://aur@aur4.archlinux.org/python-rtslib-fb.git
+	url = https://aur@aur.archlinux.org/python-rtslib-fb.git
 [submodule "_lio/python-configshell-fb"]
 	path = _lio/python-configshell-fb
-	url = https://aur@aur4.archlinux.org/python-configshell-fb.git
+	url = https://aur@aur.archlinux.org/python-configshell-fb.git
 [submodule "_lio/targetcli-fb"]
 	path = _lio/targetcli-fb
-	url = https://aur@aur4.archlinux.org/targetcli-fb.git
+	url = https://aur@aur.archlinux.org/targetcli-fb.git
 [submodule "_lio/lio-snmp"]
 	path = _lio/lio-snmp
-	url = https://aur@aur4.archlinux.org/lio-snmp.git
+	url = https://aur@aur.archlinux.org/lio-snmp.git
 [submodule "_lio/lio-utils"]
 	path = _lio/lio-utils
-	url = https://aur@aur4.archlinux.org/lio-utils.git
+	url = https://aur@aur.archlinux.org/lio-utils.git
 [submodule "_lio/python2-configshell"]
 	path = _lio/python2-configshell
-	url = https://aur@aur4.archlinux.org/python2-configshell.git
+	url = https://aur@aur.archlinux.org/python2-configshell.git
 [submodule "_lio/python2-rtslib"]
 	path = _lio/python2-rtslib
-	url = https://aur@aur4.archlinux.org/python2-rtslib.git
+	url = https://aur@aur.archlinux.org/python2-rtslib.git
 [submodule "_lio/targetcli"]
 	path = _lio/targetcli
-	url = https://aur@aur4.archlinux.org/targetcli.git
+	url = https://aur@aur.archlinux.org/targetcli.git
 [submodule "shunit2"]
 	path = shunit2
-	url = https://aur@aur4.archlinux.org/shunit2.git
+	url = https://aur@aur.archlinux.org/shunit2.git
 [submodule "_debian/perl-file-fcntllock"]
 	path = _debian/perl-file-fcntllock
-	url = https://aur@aur4.archlinux.org/perl-file-fcntllock.git
+	url = https://aur@aur.archlinux.org/perl-file-fcntllock.git
 [submodule "_musicbrainz/picard-plugins-aux"]
 	path = _musicbrainz/picard-plugins-aux
-	url = https://aur@aur4.archlinux.org/picard-plugins-aux.git
+	url = https://aur@aur.archlinux.org/picard-plugins-aux.git
 [submodule "_musicbrainz/picard-plugins-git"]
 	path = _musicbrainz/picard-plugins-git
-	url = https://aur@aur4.archlinux.org/picard-plugins-git.git
+	url = https://aur@aur.archlinux.org/picard-plugins-git.git
 [submodule "_musicbrainz/python-musicbrainzngs-git"]
 	path = _musicbrainz/python-musicbrainzngs-git
-	url = https://aur@aur4.archlinux.org/python-musicbrainzngs-git.git/
+	url = https://aur@aur.archlinux.org/python-musicbrainzngs-git.git/
 [submodule "_musicbrainz/php-musicbrainz"]
 	path = _musicbrainz/php-musicbrainz
-	url = https://aur@aur4.archlinux.org/php-musicbrainz.git
+	url = https://aur@aur.archlinux.org/php-musicbrainz.git
 [submodule "php-requests"]
 	path = php-requests
-	url = https://aur@aur4.archlinux.org/php-requests.git
+	url = https://aur@aur.archlinux.org/php-requests.git
 [submodule "lib32-ffmpeg"]
 	path = _32/lib32-ffmpeg
-	url = https://aur@aur4.archlinux.org/lib32-ffmpeg.git
+	url = https://aur@aur.archlinux.org/lib32-ffmpeg.git
 [submodule "_32/lib32-lame"]
 	path = _32/lib32-lame
-	url = https://aur@aur4.archlinux.org/lib32-lame.git
+	url = https://aur@aur.archlinux.org/lib32-lame.git
 [submodule "_32/lib32-libass"]
 	path = _32/lib32-libass
-	url = https://aur@aur4.archlinux.org/lib32-libass.git
+	url = https://aur@aur.archlinux.org/lib32-libass.git
 [submodule "_32/lib32-schroedinger"]
 	path = _32/lib32-schroedinger
-	url = https://aur@aur4.archlinux.org/lib32-schroedinger.git
+	url = https://aur@aur.archlinux.org/lib32-schroedinger.git
 [submodule "_suse/obs-build-git"]
 	path = _suse/obs-build-git
-	url = https://aur@aur4.archlinux.org/obs-build-git.git
+	url = https://aur@aur.archlinux.org/obs-build-git.git
 [submodule "_suse/obs-build"]
 	path = _suse/obs-build
-	url = https://aur@aur4.archlinux.org/obs-build.git
+	url = https://aur@aur.archlinux.org/obs-build.git
 [submodule "_suse/obs-service-source_validator"]
 	path = _suse/obs-service-source_validator
-	url = https://aur@aur4.archlinux.org/obs-service-source_validator.git
+	url = https://aur@aur.archlinux.org/obs-service-source_validator.git
 [submodule "_suse/obs-service-format_spec_file"]
 	path = _suse/obs-service-format_spec_file
-	url = https://aur@aur4.archlinux.org/obs-service-format_spec_file.git
+	url = https://aur@aur.archlinux.org/obs-service-format_spec_file.git
 [submodule "_debian/python2-support"]
 	path = _debian/python2-support
-	url = https://aur@aur4.archlinux.org/python2-support.git
+	url = https://aur@aur.archlinux.org/python2-support.git
 [submodule "_debian/python2-debianbts"]
 	path = _debian/python2-debianbts
-	url = https://aur@aur4.archlinux.org/python2-debianbts.git
+	url = https://aur@aur.archlinux.org/python2-debianbts.git
 [submodule "_debian/reportbug"]
 	path = _debian/reportbug
-	url = https://aur@aur4.archlinux.org/reportbug.git
+	url = https://aur@aur.archlinux.org/reportbug.git
 [submodule "python2-pymetrics"]
 	path = python2-pymetrics
-	url = https://aur@aur4.archlinux.org/python2-pymetrics.git
+	url = https://aur@aur.archlinux.org/python2-pymetrics.git
 [submodule "_debian/python-apt"]
 	path = _debian/python-apt
-	url = https://aur@aur4.archlinux.org/python-apt.git
+	url = https://aur@aur.archlinux.org/python-apt.git
 [submodule "_debian/distro-info-data"]
 	path = _debian/distro-info-data
-	url = https://aur@aur4.archlinux.org/distro-info-data.git
+	url = https://aur@aur.archlinux.org/distro-info-data.git
 [submodule "_debian/distro-info"]
 	path = _debian/distro-info
-	url = https://aur@aur4.archlinux.org/distro-info.git
+	url = https://aur@aur.archlinux.org/distro-info.git
 [submodule "_debian/debhelper-python"]
 	path = _debian/debhelper-python
-	url = https://aur@aur4.archlinux.org/debhelper-python.git
+	url = https://aur@aur.archlinux.org/debhelper-python.git
 [submodule "lola1"]
 	path = lola1
-	url = https://aur@aur4.archlinux.org/lola1.git
+	url = https://aur@aur.archlinux.org/lola1.git
 [submodule "pnapi"]
 	path = pnapi
-	url = https://aur@aur4.archlinux.org/pnapi.git
+	url = https://aur@aur.archlinux.org/pnapi.git
 [submodule "_musicbrainz/image-id"]
 	path = _musicbrainz/image-id
-	url = https://aur@aur4.archlinux.org/image-id.git
+	url = https://aur@aur.archlinux.org/image-id.git
 [submodule "_musicbrainz/essentia-acousticbrainz"]
 	path = _musicbrainz/essentia-acousticbrainz
-	url = https://aur@aur4.archlinux.org/essentia-acousticbrainz.git
+	url = https://aur@aur.archlinux.org/essentia-acousticbrainz.git
 [submodule "_debian/debhelper-python2"]
 	path = _debian/debhelper-python2
-	url = https://aur@aur4.archlinux.org/debhelper-python2.git
+	url = https://aur@aur.archlinux.org/debhelper-python2.git
 [submodule "_coverity/coverity-submit"]
 	path = _coverity/coverity-submit
-	url = https://aur@aur4.archlinux.org/coverity-submit.git
+	url = https://aur@aur.archlinux.org/coverity-submit.git
 [submodule "_debian/pristine-tar"]
 	path = _debian/pristine-tar
-	url = https://aur@aur4.archlinux.org/pristine-tar.git
+	url = https://aur@aur.archlinux.org/pristine-tar.git
 [submodule "_debian/bzr-builddeb"]
 	path = _debian/bzr-builddeb
-	url = https://aur@aur4.archlinux.org/bzr-builddeb.git
+	url = https://aur@aur.archlinux.org/bzr-builddeb.git
 [submodule "_musicbrainz/acousticbrainz-client-git"]
 	path = _musicbrainz/acousticbrainz-client-git
-	url = https://aur@aur4.archlinux.org/acousticbrainz-client-git.git
+	url = https://aur@aur.archlinux.org/acousticbrainz-client-git.git
 [submodule "_musicbrainz/acousticbrainz-client"]
 	path = _musicbrainz/acousticbrainz-client
-	url = https://aur@aur4.archlinux.org/acousticbrainz-client.git/
+	url = https://aur@aur.archlinux.org/acousticbrainz-client.git/
 [submodule "_32/lib32-libx264"]
 	path = _32/lib32-libx264
-	url = https://aur@aur4.archlinux.org/lib32-libx264.git/
+	url = https://aur@aur.archlinux.org/lib32-libx264.git/
 [submodule "_32/lib32-libbluray"]
 	path = _32/lib32-libbluray
-	url = https://aur@aur4.archlinux.org/lib32-libbluray.git
+	url = https://aur@aur.archlinux.org/lib32-libbluray.git
 [submodule "indicator-keylock"]
 	path = indicator-keylock
 	url = https://aur@aur.archlinux.org/indicator-keylock.git
