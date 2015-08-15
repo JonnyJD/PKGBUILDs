@@ -205,3 +205,6 @@
 [submodule "_32/lib32-libbluray"]
 	path = _32/lib32-libbluray
 	url = https://aur@aur4.archlinux.org/lib32-libbluray.git
+[submodule "indicator-keylock"]
+	path = indicator-keylock
+	url = https://aur@aur.archlinux.org/indicator-keylock.git
