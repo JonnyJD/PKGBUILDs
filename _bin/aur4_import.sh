@@ -35,8 +35,6 @@ git filter-branch -f --env-filter \
 	'export GIT_COMMITTER_DATE=$GIT_AUTHOR_DATE' -- aur4/$pkg || exit -1
 
 
-#ssh aur@aur4.archlinux.org setup-repo $pkg
-
 # push the new branch to the repo on AUR 4
 echo git push ssh+git://aur@aur4.archlinux.org/${pkg}.git/ aur4/$pkg:master
 git push --set-upstream ssh+git://aur@aur4.archlinux.org/${pkg}.git/ aur4/$pkg:master \
