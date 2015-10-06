@@ -208,3 +208,6 @@
 [submodule "indicator-keylock"]
 	path = indicator-keylock
 	url = https://aur@aur.archlinux.org/indicator-keylock.git
+[submodule "cnijfilter-mx920series"]
+	path = cnijfilter-mx920series
+	url = https://aur@aur.archlinux.org/cnijfilter-mx920series.git
