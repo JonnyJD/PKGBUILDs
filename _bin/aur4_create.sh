@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# empty submodules don't work really..
+echo please use create it in the repository
+echo and use aur4_import and aur4_make_submodule afterwards
+exit -1
+
 if [ $# -lt 1 -o \( "$1" = "-h" -o "$1" = "--help" \) ]; then
 	echo "usage: $0 <path/to/package>"
 	echo "(should be done in root of the original repository)"

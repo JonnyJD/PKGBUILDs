@@ -36,8 +36,8 @@ git filter-branch -f --env-filter \
 
 
 # push the new branch to the repo on AUR 4
-echo git push ssh+git://aur@aur4.archlinux.org/${pkg}.git/ aur4/$pkg:master
-git push --set-upstream ssh+git://aur@aur4.archlinux.org/${pkg}.git/ aur4/$pkg:master \
+echo git push ssh+git://aur@aur.archlinux.org/${pkg}.git/ aur4/$pkg:master
+git push --set-upstream ssh+git://aur@aur.archlinux.org/${pkg}.git/ aur4/$pkg:master \
 	|| exit -1
 
 # delete the temporary branch

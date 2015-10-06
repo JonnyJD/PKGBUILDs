@@ -21,17 +21,17 @@ echo mv \"$path\" \"${pkg}_aur4_bak\"
 mv "$path" "${pkg}_aur4_bak"
 
 # add the AUR 4 package as a submodule at the previous path
-echo git submodule add ssh+git://aur@aur4.archlinux.org/${pkg}.git $path
-git submodule add https://aur@aur4.archlinux.org/${pkg}.git $path
+echo git submodule add ssh+git://aur@aur.archlinux.org/${pkg}.git $path
+git submodule add https://aur@aur.archlinux.org/${pkg}.git $path
 
 
 # add a separate pushurl for write access
 # (OPTIONAL, you can also just use this url above)
 # (we need to be in the root of the repository to find .gitmodules)
 echo git config --file=.git/modules/$path/config remote.origin.pushurl \
-	ssh+git://aur@aur4.archlinux.org/${pkg}.git $path
+	ssh+git://aur@aur.archlinux.org/${pkg}.git $path
 git config --file=.git/modules/$path/config remote.origin.pushurl \
-	ssh+git://aur@aur4.archlinux.org/${pkg}.git $path
+	ssh+git://aur@aur.archlinux.org/${pkg}.git $path
 
 
 # add mksrcinfo as pre-commit hook (OPTIONAL)
