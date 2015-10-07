@@ -211,3 +211,6 @@
 [submodule "cnijfilter-mx920series"]
 	path = cnijfilter-mx920series
 	url = https://aur@aur.archlinux.org/cnijfilter-mx920series.git
+[submodule "cnijfilter-mx920"]
+	path = cnijfilter-mx920
+	url = https://aur@aur.archlinux.org/cnijfilter-mp550.git
