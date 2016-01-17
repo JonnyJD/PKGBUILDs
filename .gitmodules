@@ -214,3 +214,6 @@
 [submodule "cnijfilter-mx920"]
 	path = cnijfilter-mx920
 	url = https://aur@aur.archlinux.org/cnijfilter-mx920.git
+[submodule "djmount"]
+	path = djmount
+	url = https://aur@aur.archlinux.org/djmount.git
