@@ -6,7 +6,7 @@ if [ $# -lt 1 -o \( "$1" = "-h" -o "$1" = "--help" \) ]; then
 	exit -1
 fi
 
-repo=$1
+repo=https://aur@aur.archlinux.org/$1.git
 path=${2%/}		# the trailing / is removed
 pkg=`basename $path`
 email=`git config user.email`
